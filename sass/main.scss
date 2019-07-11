@@ -1,0 +1,135 @@
+$vhs-red: #fe272a;
+$vhs-green: #6fb716;
+$vhs-blue: #1aa2c9;
+$vhs-yellow: #fad205;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  background-color: #121316;
+}
+
+@media (max-width: 479px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  backface-visibility: hidden;
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(-10deg);
+    width: 110%;
+    line-height: 1;
+  }
+
+  &__name {
+    position: relative;
+    font-family: 'Helvetica Neue Bold', 'Liberation Sans', 'Arial';
+    font-size: 6.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    animation: 2s slideFromRight 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &__title {
+    font-family: 'Helvetica Neue Bold', 'Liberation Sans', 'Arial';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin-right: 12rem;
+
+    &--small {
+      font-size: 3.2rem;
+    }
+
+    &--line1 {
+      display: inline-block;
+      position: relative;
+      font-size: 6.4rem;
+      color: $vhs-yellow;
+      margin-bottom: -1rem;
+      animation: 2.2s slideFromRight 0.5s;
+      animation-fill-mode: backwards;
+    }
+
+    &--line2 {
+      display: inline-block;
+      position: relative;
+      font-size: 6rem;
+      animation: 2.4s slideFromRight 0.5s;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+.hero__lines {
+  font-size: 0px;
+
+  &--red {
+    display: block;
+    position: relative;
+    background-color: $vhs-red;
+    height: 1.5rem;
+    width: 100%;
+    animation: 0.8s slideFromRight 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &--green {
+    display: block;
+    position: relative;
+    background-color: $vhs-green;
+    height: 1.5rem;
+    width: 100%;
+    animation: 1s slideFromRight 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &--blue {
+    display: block;
+    position: relative;
+    background-color: $vhs-blue;
+    height: 1.5rem;
+    width: 100%;
+    animation: 1.2s slideFromRight 0.5s;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes slideFromRight {
+  // Animowanie przez transform dawalo okropnie postrzepione krawedzie
+  // w trakcie animacji (brak antyaliasingu).
+
+  0% {
+    left: 110vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+}
