@@ -6,27 +6,32 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: #121316; }
+  background-color: #121316;
+  font-family: 'Liberation Sans', 'Arial'; }
+
+@media (max-width: 767px) {
+  html {
+    font-size: 50%; } }
 
 @media (max-width: 479px) {
   html {
     font-size: 37.5%; } }
 
-@media (min-width: 480px) and (max-width: 767px) {
-  html {
-    font-size: 50%; } }
+body {
+  overflow-x: hidden; }
 
 .hero {
   position: relative;
   height: 100vh;
   width: 100vw;
+  color: #eee;
   overflow-x: hidden;
   backface-visibility: hidden; }
   .hero__wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateZ(-10deg);
+    transform: translate(-50%, -50%) rotateZ(-14deg);
     width: 110%;
     line-height: 1; }
   .hero__name {
@@ -36,7 +41,6 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    color: #fff;
     animation: 2s slideFromRight 0.5s;
     animation-fill-mode: backwards; }
   .hero__title {
@@ -44,11 +48,8 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    color: #fff;
-    margin-right: 12rem; }
-    .hero__title--small {
-      font-size: 3.2rem; }
-    .hero__title--line1 {
+    margin-right: 11.5rem; }
+    .hero__title-line1 {
       display: inline-block;
       position: relative;
       font-size: 6.4rem;
@@ -56,15 +57,18 @@ html {
       margin-bottom: -1rem;
       animation: 2.2s slideFromRight 0.5s;
       animation-fill-mode: backwards; }
-    .hero__title--line2 {
+    .hero__title-line2 {
       display: inline-block;
       position: relative;
       font-size: 6rem;
       animation: 2.4s slideFromRight 0.5s;
       animation-fill-mode: backwards; }
+    .hero__title--small {
+      font-size: 3.2rem; }
 
 .hero__lines {
-  font-size: 0px; }
+  font-size: 0px;
+  overflow: hidden; }
   .hero__lines--red {
     display: block;
     position: relative;
@@ -95,3 +99,110 @@ html {
     left: 110vw; }
   100% {
     left: 0vw; } }
+
+@keyframes slideFromLeft {
+  0% {
+    left: -110vw; }
+  100% {
+    left: 0vw; } }
+
+.navigation {
+  font-weight: 700;
+  background-color: #121316;
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  animation: opacity 1s 3s;
+  animation-fill-mode: backwards; }
+  .navigation__link, .navigation__link:link, .navigation__link:visited {
+    display: inline-block;
+    font-size: 2rem;
+    color: #eee;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 1rem 2rem; }
+  .navigation__link:hover {
+    color: #fad205; }
+  .navigation__underline {
+    display: none;
+    font-size: 0px; }
+    .navigation__underline--red {
+      display: inline-block;
+      position: relative;
+      background-color: #fe272a;
+      height: 1px;
+      width: 100%;
+      animation: 0.4s slideFromLeft;
+      animation-fill-mode: backwards; }
+    .navigation__underline--green {
+      display: inline-block;
+      position: relative;
+      background-color: #6fb716;
+      height: 1px;
+      width: 100%;
+      animation: 0.6s slideFromLeft;
+      animation-fill-mode: backwards; }
+    .navigation__underline--blue {
+      display: inline-block;
+      position: relative;
+      background-color: #1aa2c9;
+      height: 1px;
+      width: 100%;
+      animation: 0.8s slideFromLeft;
+      animation-fill-mode: backwards; }
+
+@keyframes opacity {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100; } }
+
+.about {
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: #eee;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: justify; }
+  .about:target:before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin: -8rem 0 0; }
+  .about__header {
+    margin-bottom: 2rem; }
+  .about__content {
+    margin: 0 2rem;
+    padding: 3rem;
+    border: 1px solid #2d313a;
+    border-radius: 3px; }
+
+.projects {
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: #eee;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: justify; }
+  .projects:target:before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin: -8rem 0 0; }
+
+.contact {
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: #eee;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: justify; }
+  .contact:target:before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin: -8rem 0 0; }

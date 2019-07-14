@@ -2,6 +2,8 @@ $vhs-red: #fe272a;
 $vhs-green: #6fb716;
 $vhs-blue: #1aa2c9;
 $vhs-yellow: #fad205;
+$vhs-white: #eee;
+$vhs-black: #121316;
 
 * {
   margin: 0;
@@ -12,7 +14,14 @@ $vhs-yellow: #fad205;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  background-color: #121316;
+  background-color: $vhs-black;
+  font-family: 'Liberation Sans', 'Arial';
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 50%;
+  }
 }
 
 @media (max-width: 479px) {
@@ -21,16 +30,15 @@ html {
   }
 }
 
-@media (min-width: 480px) and (max-width: 767px) {
-  html {
-    font-size: 50%;
-  }
+body {
+  overflow-x: hidden; //musi byc zdublowane bo znowu antyaliasing sie psuje
 }
 
 .hero {
   position: relative;
   height: 100vh;
   width: 100vw;
+  color: $vhs-white;
   overflow-x: hidden;
   backface-visibility: hidden;
 
@@ -38,7 +46,7 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) rotateZ(-10deg);
+    transform: translate(-50%, -50%) rotateZ(-14deg);
     width: 110%;
     line-height: 1;
   }
@@ -50,7 +58,6 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    color: #fff;
     animation: 2s slideFromRight 0.5s;
     animation-fill-mode: backwards;
   }
@@ -60,14 +67,9 @@ html {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    color: #fff;
-    margin-right: 12rem;
+    margin-right: 11.5rem;
 
-    &--small {
-      font-size: 3.2rem;
-    }
-
-    &--line1 {
+    &-line1 {
       display: inline-block;
       position: relative;
       font-size: 6.4rem;
@@ -77,18 +79,23 @@ html {
       animation-fill-mode: backwards;
     }
 
-    &--line2 {
+    &-line2 {
       display: inline-block;
       position: relative;
       font-size: 6rem;
       animation: 2.4s slideFromRight 0.5s;
       animation-fill-mode: backwards;
     }
+
+    &--small {
+      font-size: 3.2rem;
+    }
   }
 }
 
 .hero__lines {
   font-size: 0px;
+  overflow: hidden;
 
   &--red {
     display: block;
@@ -131,5 +138,156 @@ html {
 
   100% {
     left: 0vw;
+  }
+}
+
+@keyframes slideFromLeft {
+  // Animowanie przez transform dawalo okropnie postrzepione krawedzie
+  // w trakcie animacji (brak antyaliasingu).
+
+  0% {
+    left: -110vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+}
+
+.navigation {
+  font-weight: 700;
+  background-color: $vhs-black;
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  // right: 0;
+  animation: opacity 1s 3s;
+  animation-fill-mode: backwards;
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 2rem;
+      color: $vhs-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 1rem 2rem;
+    }
+
+    &:hover {
+      color: $vhs-yellow;
+    }
+  }
+
+  &__underline {
+    display: none;
+    font-size: 0px;
+    
+    &--red {
+      display: inline-block;
+      position: relative;
+      background-color: $vhs-red;
+      height: 1px;
+      width: 100%;
+      animation: 0.4s slideFromLeft;
+      animation-fill-mode: backwards;
+    }
+  
+    &--green {
+      display: inline-block;
+      position: relative;
+      background-color: $vhs-green;
+      height: 1px;
+      width: 100%;
+      animation: 0.6s slideFromLeft;
+      animation-fill-mode: backwards;
+    }
+  
+    &--blue {
+      display: inline-block;
+      position: relative;
+      background-color: $vhs-blue;
+      height: 1px;
+      width: 100%;
+      animation: 0.8s slideFromLeft;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+.about {
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: $vhs-white;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: justify;
+  
+
+  &:target:before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin: -8rem 0 0;
+  }
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    margin: 0 2rem;
+    padding: 3rem;
+    //for testing
+    border: 1px solid #2d313a;
+    border-radius: 3px;
+  }
+}
+
+.projects {
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: $vhs-white;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: justify;
+
+  &:target:before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin: -8rem 0 0;
+  }
+}
+
+.contact {
+  height: 100vh;
+  max-width: 1140px;
+  margin: 0 auto;
+  color: $vhs-white;
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: justify;
+
+  &:target:before {
+    content: "";
+    display: block;
+    height: 8rem;
+    margin: -8rem 0 0;
   }
 }
