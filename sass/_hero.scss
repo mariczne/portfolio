@@ -1,0 +1,81 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  color: $vhs-white;
+  overflow-x: hidden;
+  backface-visibility: hidden;
+
+  &__wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateZ(-14deg);
+    width: 110%;
+    line-height: 1;
+  }
+
+  &__name {
+    position: relative;
+    font-family: 'Helvetica Neue Bold', 'Liberation Sans', 'Arial';
+    font-size: 6.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__title {
+    font-family: 'Helvetica Neue Bold', 'Liberation Sans', 'Arial';
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-right: 11.5rem;
+
+    &-line1 {
+      display: inline-block;
+      position: relative;
+      font-size: 6.4rem;
+      color: $vhs-yellow;
+      margin-bottom: -1rem;
+    }
+
+    &-line2 {
+      display: inline-block;
+      position: relative;
+      font-size: 6rem;
+    }
+
+    &--small {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.hero__lines {
+  font-size: 0px;
+  overflow: hidden;
+
+  &--red {
+    display: block;
+    position: relative;
+    background-color: $vhs-red;
+    height: 1.5rem;
+    width: 100%;
+  }
+
+  &--green {
+    display: block;
+    position: relative;
+    background-color: $vhs-green;
+    height: 1.5rem;
+    width: 100%;
+  }
+
+  &--blue {
+    display: block;
+    position: relative;
+    background-color: $vhs-blue;
+    height: 1.5rem;
+    width: 100%;
+  }
+}

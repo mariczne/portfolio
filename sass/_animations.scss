@@ -1,0 +1,113 @@
+@keyframes slideFromRight {
+  // Animowanie przez transform dawalo okropnie postrzepione krawedzie
+  // w trakcie animacji (brak antyaliasingu).
+
+  0% {
+    left: 110vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+}
+
+.hero__name {
+  animation: 2s slideFromRight 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.hero__title {
+  &-line1 {
+    animation-duration: 2.2s;
+    animation-name: slideFromRight;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &-line2 {
+    animation-duration: 2.4s;
+    animation-name: slideFromRight;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.hero__lines {
+  &--red {
+    animation-duration: 0.8s;
+    animation-name: slideFromRight;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &--green {
+    animation-duration: 1s;
+    animation-name: slideFromRight;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+
+  &--blue {
+    animation-duration: 1.2s;
+    animation-name: slideFromRight;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100;
+  }
+}
+
+@keyframes slideFromLeft {
+  // Animowanie przez transform dawalo okropnie postrzepione krawedzie
+  // w trakcie animacji (brak antyaliasingu).
+
+  0% {
+    left: -110vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+}
+
+.navigation {
+  animation: opacity 1s 3s;
+  animation-fill-mode: backwards;
+
+  &__underline {
+    &--red {
+      animation: 0.4s slideFromLeft;
+      animation-fill-mode: backwards;
+    }
+
+    &--green {
+      animation: 0.6s slideFromLeft;
+      animation-fill-mode: backwards;
+    }
+
+    &--blue {
+      animation: 0.8s slideFromLeft;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+
+.about {
+  transition: opacity 1s;
+}
+
+.projects {
+  transition: opacity 1s;
+}
+
+.contact {
+  transition: opacity 1s;
+}

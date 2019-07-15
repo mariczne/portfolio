@@ -1,0 +1,54 @@
+.navigation {
+  font-weight: 700;
+  background-color: $vhs-black;
+  display: block;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 2rem;
+      color: $vhs-white;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 1rem 2rem;
+    }
+
+    &:hover {
+      color: $vhs-yellow;
+    }
+  }
+
+  &__underline {
+    display: none;
+    font-size: 0px;
+    
+    &--red {
+      display: inline-block;
+      position: relative;
+      background-color: $vhs-red;
+      height: 1px;
+      width: 100%;
+    }
+  
+    &--green {
+      display: inline-block;
+      position: relative;
+      background-color: $vhs-green;
+      height: 1px;
+      width: 100%;
+    }
+  
+    &--blue {
+      display: inline-block;
+      position: relative;
+      background-color: $vhs-blue;
+      height: 1px;
+      width: 100%;
+    }
+  }
+}

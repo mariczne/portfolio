@@ -5,49 +5,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>kwiek.dev - Marcin Kwiek</title>
+  <title>kwiek.dev / Marcin Kwiek / web developer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.9.0/css/all.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <div class="container">
-
-    <nav class="navigation">
-      <a href="#about" class="navigation__link">About me</a>
-      <a href="#projects" class="navigation__link">Projects</a>
-      <a href="#contact" class="navigation__link">Contact</a>
-      <div class="navigation__underline">
-        <div class="navigation__underline--red"></div>
-        <div class="navigation__underline--green"></div>
-        <div class="navigation__underline--blue"></div>
+  
+  <nav class="navigation">
+    <a href="#about" class="navigation__link">About me</a>
+    <a href="#projects" class="navigation__link">Projects</a>
+    <a href="#contact" class="navigation__link">Contact</a>
+    <a href="https://github.com/mariczne" class="navigation__link"><i class="fab fa-github"></i></a>
+    <div class="navigation__underline">
+      <div class="navigation__underline--red"></div>
+      <div class="navigation__underline--green"></div>
+      <div class="navigation__underline--blue"></div>
+    </div>
+  </nav>
+  
+  <div class="hero">
+    <div class="hero__wrapper">
+      <div class="hero__name">
+        <span>Marcin Kwiek</span>
       </div>
-    </nav>
-
-    <div class="hero">
-      <div class="hero__wrapper">
-        <div class="hero__name">
-          <span>Marcin Kwiek</span>
-        </div>
-        <div class="hero__lines">
-          <div class="hero__lines--red"></div>
-          <div class="hero__lines--green"></div>
-          <div class="hero__lines--blue"></div>
-        </div>
-        <div class="hero__title">
-          <span class="hero__title-line1">web <span class="hero__title--small">full&centerdot;stack</span></span><br>
-          <span class="hero__title-line2">developer</span>
-        </div>
+      <div class="hero__lines">
+        <div class="hero__lines--red"></div>
+        <div class="hero__lines--green"></div>
+        <div class="hero__lines--blue"></div>
+      </div>
+      <div class="hero__title">
+        <span class="hero__title-line1">web <span class="hero__title--small">full&centerdot;stack</span></span><br>
+        <span class="hero__title-line2">developer</span>
       </div>
     </div>
-
+  </div>
+  
+  <div class="container">
     <section class="about" id="about">
       <div class="about__content">
         <h2 class="about__header">
           About me
         </h2>
-        I am a web developer. My main area of interest is programming in Javascript. Lorem ipsum dolor sit
-        amet, consectetur adipisicing elit. Dicta nisi qui recusandae veritatis a eius provident eum omnis corrupti
-        inventore quo ad tenetur suscipit, id ipsam pariatur laudantium nihil exercitationem.
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae perspiciatis architecto animi nesciunt!
+          Facere quas error aliquid est amet aperiam, iusto aut cupiditate, perspiciatis blanditiis, nostrum odio id
+          commodi tempore. Animi eum voluptas assumenda, maiores molestiae sit aspernatur obcaecati facere, eaque
+          asperiores nostrum dolor eius facilis dolore impedit quo beatae odit architecto soluta! Temporibus deserunt
+          eos soluta, quo dolor consectetur.</p><br>
+
+        <h4>On the front-end, I use:</h4>
+        <p>Lorem ipsum dolor, sit amet</p><br>
+
+        <h4>On the back-end, I use:</h4>
+        <p>Lorem ipsum dolor, sit amet</p><br>
+
+        <h4>I also use:</h4>
+        <p>Lorem ipsum dolor, sit amet</p>
+
       </div>
     </section>
 
@@ -57,15 +71,49 @@
           Projects
         </h2>
         <div class="projects__item">
-          <h4 class="projects__item-header">Project 1</h4>
+          <div class="projects__item-imagebox">
+            <img src="img/project1.png" alt="traker screenshot" class="projects__item-image">
+          </div>
+          <div class="projects__item-description">
+            <h3 class="projects__item-header">traker</h3>
+            <span class="projects__item-links">
+                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-code"></i>
+            </span>
+            <p>complete client (React) and server (Node.js + Express) web application that allows the user to easily track daily quantifiable data - e.g. their weight, waist circumference etc.
+            </p>
+          </div>
         </div>
 
         <div class="projects__item">
-          <h4 class="projects__item-header">Project 2</h4>
+          <div class="projects__item-imagebox">
+            <img src="img/project2.png" alt="color-ui screenshot" class="projects__item-image">
+          </div>
+          <div class="projects__item-description">
+            <h3 class="projects__item-header">color-ui</h3>
+            <span class="projects__item-links">
+                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-code"></i>
+            </span>
+            <p>web user interface created using React; the application connects to an API that
+                analyses main colours present in the image provided by the user and displays results
+            </p>
+          </div>
         </div>
 
         <div class="projects__item">
-          <h4 class="projects__item-header">Project 3</h4>
+          <div class="projects__item-imagebox">
+            <img src="img/project3.png" alt="kwiek.dev screenshot" class="projects__item-image">
+          </div>
+          <div class="projects__item-description">
+            <h3 class="projects__item-header">kwiek.dev</h3>
+            <span class="projects__item-links">
+                <i class="fas fa-external-link-alt"></i>
+                <i class="fas fa-code"></i>
+            </span>
+            <p>The site that you are viewing right now - a personal portfolio page to showcase my projects. Made with pure HTML, CSS and JavaScript with no external libraries.
+            </p>
+          </div>
         </div>
       </div>
     </section>
