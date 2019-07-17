@@ -4,6 +4,7 @@ $vhs-blue: #1aa2c9;
 $vhs-yellow: #fad205;
 $vhs-white: #eee;
 $vhs-black: #121316;
+$vhs-grey: #1f2125;
 
 * {
   margin: 0;
@@ -56,6 +57,7 @@ body {
 @import "./about";
 @import "./animations";
 @import "./contact";
+@import "./footer";
 @import "./hero";
 @import "./navigation";
 @import "./projects";

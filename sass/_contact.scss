@@ -1,10 +1,11 @@
 .contact {
   opacity: 100;
-  min-height: 100vh;
+  min-height: calc(100vh - 4.5rem);
   color: $vhs-white;
   font-size: 2.4rem;
   font-weight: 500;
   text-align: justify;
+  margin-bottom: 8rem;
 
   &:target:before {
     content: "";
@@ -19,5 +20,75 @@
 
   &__content {
     margin: 0 2rem;
+  }
+
+  &__form {
+    border-radius: 3px;
+    margin-top: 4rem;
+    padding: 4rem;
+    background-color: $vhs-grey;
+    color: $vhs-black;
+  }
+
+  &__input {
+    color: inherit;
+    background-color: $vhs-white;
+    display: inline-block;
+    width: 100%;
+    height: 4rem;
+    border-radius: 3px;
+    border-width: 0px;
+    padding: 1rem;
+    margin: 2rem 0;
+    font-family: inherit;
+
+  }
+  
+  &__textarea {
+    color: inherit;
+    resize: none;
+    background-color: $vhs-white;
+    display: inline-block;
+    width: 100%;
+    height: 4rem;
+    border-radius: 3px;
+    border-width: 0px;
+    padding: 1rem;
+    margin: 2rem 0;
+    height: 20rem;
+    font-family: inherit;
+
+  }
+
+  &__label {
+    color: $vhs-white;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: -1.5rem;
+  }
+
+  &__submit {
+    color: inherit;
+    background-color: $vhs-white;
+    border: 0;
+    border-radius: 3px;
+    padding: 1rem 2rem;
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  &-success {
+    display: none;
+
+    &:target {
+      font-size: 1.8rem;
+      color: $vhs-white;
+      display: inline-block;
+      vertical-align: middle;
+      border-bottom: 1px solid $vhs-green;
+      margin-left: 1rem;
+    }
   }
 }

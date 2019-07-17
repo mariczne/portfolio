@@ -3,36 +3,42 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Marcin Kwiek - portfolio webpage">
+  <meta name="keywords" content="web,developer,react,javascript,frontend">
+  <meta name="author" content="Marcin Kwiek">
+  <meta name="msapplication-TileColor" content="#121316">
+  <meta name="theme-color" content="#121316">
   <title>kwiek.dev / Marcin Kwiek / web developer</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.9.0/css/all.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  
+
   <nav class="navigation">
     <a href="#about" class="navigation__link">About me</a>
     <a href="#projects" class="navigation__link">Projects</a>
     <a href="#contact" class="navigation__link">Contact</a>
     <a href="https://github.com/mariczne" class="navigation__link"><i class="fab fa-github"></i></a>
-    <div class="navigation__underline">
-      <div class="navigation__underline--red"></div>
-      <div class="navigation__underline--green"></div>
-      <div class="navigation__underline--blue"></div>
+    <div class="navigation__underlines">
+      <div class="navigation__underline navigation__underline--red"></div>
+      <div class="navigation__underline navigation__underline--green"></div>
+      <div class="navigation__underline navigation__underline--blue"></div>
     </div>
   </nav>
-  
+
   <div class="hero">
     <div class="hero__wrapper">
       <div class="hero__name">
         <span>Marcin Kwiek</span>
       </div>
       <div class="hero__lines">
-        <div class="hero__lines--red"></div>
-        <div class="hero__lines--green"></div>
-        <div class="hero__lines--blue"></div>
+        <div class="hero__line hero__line--red"></div>
+        <div class="hero__line hero__line--green"></div>
+        <div class="hero__line hero__line--blue"></div>
       </div>
       <div class="hero__title">
         <span class="hero__title-line1">web <span class="hero__title--small">full&centerdot;stack</span></span><br>
@@ -40,7 +46,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="container">
     <section class="about" id="about">
       <div class="about__content">
@@ -56,7 +62,7 @@
         <h4>On the front-end, I use:</h4>
         <p>Lorem ipsum dolor, sit amet</p><br>
 
-        <h4>On the back-end, I use:</h4>
+        <h4>On the back-end, I work with:</h4>
         <p>Lorem ipsum dolor, sit amet</p><br>
 
         <h4>I also use:</h4>
@@ -77,26 +83,27 @@
           <div class="projects__item-description">
             <h3 class="projects__item-header">traker</h3>
             <span class="projects__item-links">
-                <i class="fas fa-external-link-alt"></i>
-                <i class="fas fa-code"></i>
+              <i class="fas fa-external-link-alt"></i>
+              <i class="fas fa-code"></i>
             </span>
-            <p>complete client (React) and server (Node.js + Express) web application that allows the user to easily track daily quantifiable data - e.g. their weight, waist circumference etc.
+            <p>Complete client (React) and server (Node.js + Express) web application that allows the user to easily
+              track daily quantifiable data - e.g. their weight, waist circumference etc.
             </p>
           </div>
         </div>
 
         <div class="projects__item">
           <div class="projects__item-imagebox">
-            <img src="img/project2.png" alt="color-ui screenshot" class="projects__item-image">
+            <img src="img/project2.jpg" alt="color-ui screenshot" class="projects__item-image">
           </div>
           <div class="projects__item-description">
             <h3 class="projects__item-header">color-ui</h3>
             <span class="projects__item-links">
-                <i class="fas fa-external-link-alt"></i>
-                <i class="fas fa-code"></i>
+              <i class="fas fa-external-link-alt"></i>
+              <i class="fas fa-code"></i>
             </span>
-            <p>web user interface created using React; the application connects to an API that
-                analyses main colours present in the image provided by the user and displays results
+            <p>Web user interface created using React; the application connects to an API that
+              analyses main colours present in the image provided by the user and displays results.
             </p>
           </div>
         </div>
@@ -108,10 +115,11 @@
           <div class="projects__item-description">
             <h3 class="projects__item-header">kwiek.dev</h3>
             <span class="projects__item-links">
-                <i class="fas fa-external-link-alt"></i>
-                <i class="fas fa-code"></i>
+              <a href="https://kwiek.dev" class="projects__item-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/mariczne/portfolio" class="projects__item-link"><i class="fas fa-code"></i></a>
             </span>
-            <p>The site that you are viewing right now - a personal portfolio page to showcase my projects. Made with pure HTML, CSS and JavaScript with no external libraries.
+            <p>The site that you are viewing right now - a personal portfolio page to showcase my projects. Made with
+              pure HTML, CSS and JavaScript with no external libraries.
             </p>
           </div>
         </div>
@@ -123,19 +131,43 @@
         <h2 class="contact__header">
           Contact
         </h2>
-        Lorem ipsum dolor sit
-        amet, consectetur adipisicing elit. Dicta nisi qui recusandae veritatis a eius provident eum omnis corrupti
-        inventore quo ad tenetur suscipit, id ipsam pariatur laudantium nihil exercitationem.
+        <p>If you are interested in my services, would like to collaborate or simply have a question, feel free to
+          contact me using the form below:</p>
+        <form class="contact__form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
+          action="https://formsubmit.co/ba1b033bfd953bb3b73b27ecdb1b53b6" method="post">
+          <label for="full-name" class="contact__label">Your name</label>
+          <input type="text" name="name" id="full-name" placeholder="John Smith" required="" class="contact__input">
+
+          <label for="email-address" class="contact__label">Your e-mail address</label>
+          <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required=""
+            class="contact__input">
+
+          <label for="message" class="contact__label">Message</label>
+          <textarea name="message" id="message"
+            placeholder="There's an interesting project coming up that I'd like you to be a part of..."
+            required="" class="contact__textarea"></textarea>
+
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" id="email-subject" value="Message from portfolio form">
+          <input type="hidden" name="_next" value="https://kwiek.dev#contact-success">
+          <input type="submit" value="Send" class="contact__submit">
+          <span class="contact-success" id="contact-success">Message successfully sent! You'll be hearing from me
+            shortly</span>
+        </form>
       </div>
     </section>
 
-    <footer class="footer">
-
-    </footer>
-
   </div>
-</body>
+  <footer class="footer">
+    <div class="footer__logobox"><img src="img/favicon.ico" alt="Logo"></div>
+    <div class="footer__copyright">&copy; 2019 Marcin Kwiek</div>
+    <div class="footer__inspired-by">inspired by<a href="https://www.youtube.com/watch?v=e9DfSCk-6Ko"
+        class="footer__ytlink"> <i class="fab fa-youtube"></i> blank vhs covers were kinda beautiful</a></div>
+  </footer>
 
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
 
 </html>

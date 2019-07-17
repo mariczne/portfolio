@@ -54,28 +54,23 @@
 .hero__lines {
   font-size: 0px;
   overflow: hidden;
+}
+
+.hero__line {
+  display: block;
+  position: relative;
+  height: 1.5rem;
+  width: 100%;
 
   &--red {
-    display: block;
-    position: relative;
     background-color: $vhs-red;
-    height: 1.5rem;
-    width: 100%;
   }
 
   &--green {
-    display: block;
-    position: relative;
     background-color: $vhs-green;
-    height: 1.5rem;
-    width: 100%;
   }
 
   &--blue {
-    display: block;
-    position: relative;
     background-color: $vhs-blue;
-    height: 1.5rem;
-    width: 100%;
   }
 }

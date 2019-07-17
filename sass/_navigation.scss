@@ -23,32 +23,27 @@
     }
   }
 
-  &__underline {
+  &__underlines {
     display: none;
     font-size: 0px;
+  }
+
+  &__underline {
+    display: inline-block;
+    position: relative;
+    height: 1px;
+    width: 100%;
     
     &--red {
-      display: inline-block;
-      position: relative;
       background-color: $vhs-red;
-      height: 1px;
-      width: 100%;
     }
   
     &--green {
-      display: inline-block;
-      position: relative;
       background-color: $vhs-green;
-      height: 1px;
-      width: 100%;
     }
   
     &--blue {
-      display: inline-block;
-      position: relative;
       background-color: $vhs-blue;
-      height: 1px;
-      width: 100%;
     }
   }
 }
