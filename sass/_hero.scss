@@ -13,6 +13,8 @@
     transform: translate(-50%, -50%) rotateZ(-14deg);
     width: 110%;
     line-height: 1;
+    backface-visibility: hidden; 
+    overflow: hidden;
   }
 
   &__name {

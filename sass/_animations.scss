@@ -1,34 +1,34 @@
 @keyframes slideFromRight {
-  // Animowanie przez transform dawalo okropnie postrzepione krawedzie
-  // w trakcie animacji (brak antyaliasingu).
-
   0% {
-    left: 110vw;
+    transform: translateX(110vw);
   }
 
   100% {
-    left: 0vw;
+    transform: translateX(0);
   }
 }
 
 .hero__name {
-  animation: 2s slideFromRight 0.5s;
+  animation: 1.6s slideFromRight 0.5s;
   animation-fill-mode: backwards;
+  will-change: transform;
 }
 
 .hero__title {
   &-line1 {
-    animation-duration: 2.2s;
+    animation-duration: 1.8s;
     animation-name: slideFromRight;
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
+    will-change: transform;
   }
 
   &-line2 {
-    animation-duration: 2.4s;
+    animation-duration: 2s;
     animation-name: slideFromRight;
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
+    will-change: transform;
   }
 }
 
@@ -36,6 +36,7 @@
   animation-name: slideFromRight;
   animation-delay: 0.5s;
   animation-fill-mode: backwards;
+  will-change: transform;
 
   &--red {
     animation-duration: 0.8s;
@@ -61,15 +62,12 @@
 }
 
 @keyframes slideFromLeft {
-  // Animowanie przez transform dawalo okropnie postrzepione krawedzie
-  // w trakcie animacji (brak antyaliasingu).
-
   0% {
-    left: -110vw;
+    transform: translateX(-110vw);
   }
 
   100% {
-    left: 0vw;
+    transform: translateX(0);
   }
 }
 
@@ -80,6 +78,7 @@
   &__underline {
     animation-name: slideFromLeft;
     animation-fill-mode: backwards;
+    will-change: transform;
 
     &--red {
       animation-duration: 0.4s;

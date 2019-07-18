@@ -53,30 +53,34 @@ body {
 
 @keyframes slideFromRight {
   0% {
-    left: 110vw; }
+    transform: translateX(110vw); }
   100% {
-    left: 0vw; } }
+    transform: translateX(0); } }
 
 .hero__name {
-  animation: 2s slideFromRight 0.5s;
-  animation-fill-mode: backwards; }
+  animation: 1.6s slideFromRight 0.5s;
+  animation-fill-mode: backwards;
+  will-change: transform; }
 
 .hero__title-line1 {
-  animation-duration: 2.2s;
+  animation-duration: 1.8s;
   animation-name: slideFromRight;
   animation-delay: 0.5s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  will-change: transform; }
 
 .hero__title-line2 {
-  animation-duration: 2.4s;
+  animation-duration: 2s;
   animation-name: slideFromRight;
   animation-delay: 0.5s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  will-change: transform; }
 
 .hero__line {
   animation-name: slideFromRight;
   animation-delay: 0.5s;
-  animation-fill-mode: backwards; }
+  animation-fill-mode: backwards;
+  will-change: transform; }
   .hero__line--red {
     animation-duration: 0.8s; }
   .hero__line--green {
@@ -92,16 +96,17 @@ body {
 
 @keyframes slideFromLeft {
   0% {
-    left: -110vw; }
+    transform: translateX(-110vw); }
   100% {
-    left: 0vw; } }
+    transform: translateX(0); } }
 
 .navigation {
   animation: opacity 1s 3s;
   animation-fill-mode: backwards; }
   .navigation__underline {
     animation-name: slideFromLeft;
-    animation-fill-mode: backwards; }
+    animation-fill-mode: backwards;
+    will-change: transform; }
     .navigation__underline--red {
       animation-duration: 0.4s; }
     .navigation__underline--green {
@@ -219,7 +224,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotateZ(-14deg);
     width: 110%;
-    line-height: 1; }
+    line-height: 1;
+    backface-visibility: hidden;
+    overflow: hidden; }
   .hero__name {
     position: relative;
     font-family: 'Helvetica Neue Bold', 'Liberation Sans', 'Arial';
