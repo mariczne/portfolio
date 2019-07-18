@@ -21,8 +21,12 @@ const sectionObserver = new IntersectionObserver(sectionsHandler,
 
 function sectionsHandler(entries, observer) {
   entries.forEach(entry => {
-    // if a section takes 50% or more of the viewport, fade it in
-    entry.target.style.opacity = (entry.intersectionRect.height / entry.rootBounds.height >= 0.5) ? 100 : 0;
+    // if a section takes 20% or more of the viewport, fade it in.
+    // because of threshold every 10% intersection ratio it will 
+    // not always be perfectly 20%
+    // (intersection ratio is different to what I'm after:
+    // it's % of element visible, not element taking % of viewport)
+    entry.target.style.opacity = (entry.intersectionRect.height / entry.rootBounds.height >= 0.2) ? 100 : 0;
   })
 }
 
