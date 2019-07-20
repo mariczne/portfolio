@@ -115,8 +115,12 @@
           <div class="projects__item-description">
             <h3 class="projects__item-header">kwiek.dev</h3>
             <span class="projects__item-links">
-              <a href="https://kwiek.dev" class="projects__item-link"><i class="fas fa-external-link-alt"></i></a>
-              <a href="https://github.com/mariczne/portfolio" class="projects__item-link"><i class="fas fa-code"></i></a>
+              <a href="https://kwiek.dev" class="projects__item-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://github.com/mariczne/portfolio" class="projects__item-link">
+                <i class="fas fa-code"></i>
+              </a>
             </span>
             <p>The site that you are viewing right now - a personal portfolio page to showcase my projects. Made with
               pure HTML, CSS and JavaScript with no external libraries.
@@ -133,28 +137,20 @@
         </h2>
         <p>If you are interested in my services, would like to collaborate or simply have a question, feel free to
           contact me using the form below:</p>
-        <form class="contact__form" id="fs-frm" name="simple-contact-form" accept-charset="utf-8"
-          action="https://formsubmit.co/ba1b033bfd953bb3b73b27ecdb1b53b6" method="post">
-          <label for="full-name" class="contact__label">Your name</label>
-          <input type="text" name="name" id="full-name" placeholder="John Smith" required="" class="contact__input">
+        <form class="contact__form" id="contact__form" accept-charset="utf-8" method="post">
+          <label for="name" class="contact__label">Your name</label>
+          <input type="text" name="name" id="name" placeholder="John Smith" required class="contact__input">
 
-          <label for="email-address" class="contact__label">Your e-mail address</label>
-          <input type="email" name="email" id="email-address" placeholder="email@domain.tld" required=""
-            class="contact__input">
+          <label for="email" class="contact__label">Your e-mail address</label>
+          <input type="email" name="email" id="email" placeholder="email@domain.tld" required class="contact__input">
 
           <label for="message" class="contact__label">Message</label>
           <textarea name="message" id="message"
-            placeholder="There's an interesting project coming up that I'd like you to be a part of..."
-            required="" class="contact__textarea"></textarea>
+            placeholder="There's an interesting project coming up that I'd like you to be a part of..." required
+            class="contact__textarea"></textarea>
 
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" id="email-subject" value="Message from portfolio form">
-          <input type="hidden" name="_next" value="https://kwiek.dev#contact-success">
           <input type="submit" value="Send" class="contact__submit">
-          <span class="contact-success" id="contact-success">Message successfully sent! You'll be hearing from me
-            shortly</span>
-        </form>
+          <span id="contact-state" class="contact-state"></span>
       </div>
     </section>
 

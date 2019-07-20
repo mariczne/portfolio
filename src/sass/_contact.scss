@@ -79,16 +79,20 @@
     }
   }
 
-  &-success {
-    display: none;
+  &-state {
+    font-size: 1.6rem;
+    color: $vhs-white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 auto;
+    border-bottom: 1px solid $vhs-yellow;
 
-    &:target {
-      font-size: 1.8rem;
-      color: $vhs-white;
-      display: inline-block;
-      vertical-align: middle;
+    &--success {
       border-bottom: 1px solid $vhs-green;
-      margin-left: 1rem;
+    }
+
+    &--fail {
+      border-bottom: 1px solid $vhs-red;
     }
   }
 }

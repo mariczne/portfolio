@@ -22,9 +22,8 @@ const sectionObserver = new IntersectionObserver(sectionsHandler,
 function sectionsHandler(entries, observer) {
   entries.forEach(entry => {
     // if a section takes 20% or more of the viewport, fade it in.
-    // because of threshold every 10% intersection ratio it will 
-    // not always be perfectly 20%
-    // (intersection ratio is different to what I'm after:
+    // because of threshold every 10% intersection ratio it will not always be perfectly 20%
+    // (also intersection ratio is different to what I'm targeting:
     // it's % of element visible, not element taking % of viewport)
     entry.target.style.opacity = (entry.intersectionRect.height / entry.rootBounds.height >= 0.2) ? 100 : 0;
   })
@@ -34,4 +33,39 @@ const sections = document.querySelectorAll('section');
 
 sections.forEach(section => {
   sectionObserver.observe(section)
+})
+
+// Contact form handling
+const contactForm = document.getElementById('contact__form')
+const formState = document.getElementById('contact-state');
+
+function handleSuccess() {
+  formState.textContent = 'Message successfully sent! You\'ll be hearing from me shortly.';
+  formState.classList.add('contact-state--success');
+  contactForm.reset();
+}
+
+function handleFailure() {
+  formState.textContent = 'There\'s been a problem processing your request :(';
+  formState.classList.add('contact-state--fail');
+}
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(contactForm);
+
+  formState.classList.remove('contact-state--fail', 'contact-state--success');
+  formState.textContent = 'Sending message...'
+
+  fetch('/.netlify/functions/send', {
+    method: 'POST',
+    body: JSON.stringify(Object.fromEntries(formData)),
+    headers:{
+      'content-type': 'application/json'
+    }
+  })
+  .then(res => res.json())
+  .then(response => response.status === 'success' ? handleSuccess() : handleFailure())
+  .catch(() => handleFailure())
 })
