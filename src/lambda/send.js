@@ -10,8 +10,8 @@ const headers = {
   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
   'Content-Type': 'application/json',
   'Access-Control-Allow-Methods': '*',
-  'Access-Control-Max-Age': 2592000,
-  'Access-Control-Allow-Credentials': true,
+  'Access-Control-Max-Age': '2592000',
+  'Access-Control-Allow-Credentials': 'true',
 };
 
 function invalidRequest(callback) {
@@ -41,7 +41,7 @@ exports.handler = (event, context, callback) => {
 
   if (event.httpMethod === 'OPTIONS') {
     return callback(null, {
-      statusCode: '204',
+      statusCode: 204,
       headers
     });
   }
