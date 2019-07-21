@@ -31,7 +31,7 @@
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    margin-right: 11.5rem;
+    margin-right: 12rem;
 
     &-line1 {
       display: inline-block;
@@ -44,11 +44,11 @@
     &-line2 {
       display: inline-block;
       position: relative;
-      font-size: 6rem;
+      font-size: 5.8rem;
     }
 
     &--small {
-      font-size: 3.2rem;
+      font-size: 50%;
     }
   }
 }

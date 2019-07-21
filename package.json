@@ -13,9 +13,11 @@
   "author": "Marcin Kwiek",
   "license": "ISC",
   "devDependencies": {
-    "mailgun-js": "^0.22.0",
     "netlify-lambda": "^1.5.0",
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "mailgun-js": "^0.22.0"
   }
 }

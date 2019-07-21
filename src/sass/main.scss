@@ -44,7 +44,8 @@ html {
 }
 
 body {
-  overflow-x: hidden; //musi byc zdublowane bo znowu antyaliasing sie psuje
+  // removing breaks antialiasing
+  overflow-x: hidden;
 }
 
 .container {
