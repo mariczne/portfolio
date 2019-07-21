@@ -1,7 +1,6 @@
 const apiKey = process.env.API_KEY;
 const domain = process.env.DOMAIN;
 const receiverMail = process.env.RECEIVER_MAIL;
-const allowedOrigin = process.env.ALLOWED_ORIGIN;
 
 const mailgun = require('mailgun-js')({ apiKey, domain });
 
@@ -26,19 +25,6 @@ function invalidRequest(callback) {
 }
 
 exports.handler = (event, context, callback) => {
-  if (!event.headers.origin || event.headers.origin !== allowedOrigin) {
-    return callback(null, {
-      statusCode: 401,
-      headers,
-      body: JSON.stringify({
-        status: 'fail',
-        data: {
-          unauthorized: 'Unauthorized'
-        }
-      })
-    });
-  }
-
   if (event.httpMethod === 'OPTIONS') {
     return callback(null, {
       statusCode: 204,
@@ -60,16 +46,19 @@ exports.handler = (event, context, callback) => {
   const messageData = {
     from: `${data.name} <${data.email}>`,
     to: receiverMail,
-    subject: `kwiek.dev contact message from ${data.name}`,
+    subject: `kwiek.dev contact form message`,
     text: `${data.message}`
   };
 
   mailgun.messages().send(messageData, (error) => {
     if (error) {
       return callback(null, {
-        statusCode: 500,
+        statusCode: error.statusCode,
         headers,
-        body: JSON.stringify({ status: 'error', message: "Something bad happened" })
+        body: JSON.stringify({
+          status: 'fail',
+          message: error.message
+        })
       });
     } else {
       delete messageData.to;

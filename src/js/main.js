@@ -40,14 +40,18 @@ const contactForm = document.getElementById('contact__form')
 const formState = document.getElementById('contact-state');
 
 function handleSuccess() {
-  formState.textContent = 'Message successfully sent! You\'ll be hearing from me shortly.';
   formState.classList.add('contact-state--success');
+  formState.textContent = 'Message successfully sent! You\'ll be hearing from me shortly';
   contactForm.reset();
 }
 
-function handleFailure() {
-  formState.textContent = 'There\'s been a problem processing your request :(';
+function handleFailure(response) {
   formState.classList.add('contact-state--fail');
+  if (response) {
+    formState.textContent = 'Invalid request. Is your e-mail address correct?'
+    return;
+  }
+  formState.textContent = 'Unexpected problem processing your message';
 }
 
 contactForm.addEventListener('submit', (e) => {
@@ -66,6 +70,6 @@ contactForm.addEventListener('submit', (e) => {
     }
   })
   .then(res => res.json())
-  .then(response => response.status === 'success' ? handleSuccess() : handleFailure())
-  .catch(() => handleFailure())
+  .then(response => response.status === 'success' ? handleSuccess() : handleFailure(response))
+  .catch(response => handleFailure(response))
 })
