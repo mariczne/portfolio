@@ -72,7 +72,7 @@
 }
 
 .navigation {
-  animation: opacity 1s 3s;
+  animation: opacity 1s 2.5s;
   animation-fill-mode: backwards;
 
   &__underline {
@@ -94,14 +94,10 @@
   }
 }
 
-.about {
+.about, .projects, .contact {
   transition: opacity 1s;
 }
 
-.projects {
-  transition: opacity 1s;
-}
-
-.contact {
-  transition: opacity 1s;
+.contact-state {
+  transition: all .5s;
 }
