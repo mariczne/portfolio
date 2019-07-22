@@ -12,7 +12,7 @@
   <meta name="theme-color" content="#121316">
   <title>kwiek.dev / Marcin Kwiek / web developer</title>
   <link rel="shortcut icon" type="image/png" href="img/favicon.ico"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.9.0/css/all.css">
+  <link rel="stylesheet" href="fonts/icomoon.css">
   <link rel="stylesheet" href="sass/main.scss">
 </head>
 
@@ -22,7 +22,7 @@
     <a href="#about" class="navigation__link">About me</a>
     <a href="#projects" class="navigation__link">Projects</a>
     <a href="#contact" class="navigation__link">Contact</a>
-    <a href="https://github.com/mariczne" class="navigation__link"><i class="fab fa-github"></i></a>
+    <a href="https://github.com/mariczne" class="navigation__link"><i class="icon-github"></i></a>
     <div class="navigation__underlines">
       <div class="navigation__underline navigation__underline--red"></div>
       <div class="navigation__underline navigation__underline--green"></div>
@@ -50,23 +50,37 @@
   <div class="container">
     <section class="about" id="about">
       <div class="about__content">
-        <h2 class="about__header">
+
+        <h2 class="about__header--primary">
           About me
         </h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae perspiciatis architecto animi nesciunt!
-          Facere quas error aliquid est amet aperiam, iusto aut cupiditate, perspiciatis blanditiis, nostrum odio id
-          commodi tempore. Animi eum voluptas assumenda, maiores molestiae sit aspernatur obcaecati facere, eaque
-          asperiores nostrum dolor eius facilis dolore impedit quo beatae odit architecto soluta! Temporibus deserunt
-          eos soluta, quo dolor consectetur.</p><br>
 
+        <p>Hi, my name is <strong>Marcin</strong>. I primarily build <strong>user interfaces</strong>,
+          but I'm not afraid of the back-end, too.<br>
+          My journey with web development began in mid-2018 and I've been learning something new every day since. I&nbsp;enjoy solving problems and seeing the effect of my work gives me a lot of satisfaction. </p><!-- <br> -->
+
+          <h3 class="about__header--secondary">Technologies that I have experience with:</h3><!-- <br> -->
         <h4>On the front-end, I use:</h4>
-        <p>Lorem ipsum dolor, sit amet</p><br>
+        <ul class="about__list"> 
+          <li><i class="about__icon icon-html5"></i>HTML</li>
+          <li><i class="about__icon icon-css3"></i>CSS (SASS)</li>
+          <li><i class="about__icon icon-javascript"></i>JavaScript</li>
+          <li><i class="about__icon icon-react"></i>React</li>
+        </ul><!-- <br> -->
 
         <h4>On the back-end, I work with:</h4>
-        <p>Lorem ipsum dolor, sit amet</p><br>
+        <ul class="about__list"> 
+            <li><i class="about__icon icon-node-dot-js"></i>Node.js with Express</li>
+            <li><i class="about__icon icon-database"></i>SQL or MongoDB</li>
+          </ul><!-- <br> -->
 
         <h4>I also use:</h4>
-        <p>Lorem ipsum dolor, sit amet</p>
+          <ul class="about__list"> 
+            <li><i class="about__icon icon-git"></i>git</li>
+            <li><i class="about__icon icon-linux"></i>Linux</li>
+          </ul><!-- <br> -->
+
+          <p>I speak <strong>Polish</strong> and <strong>English</strong>.</p>
 
       </div>
     </section>
@@ -83,8 +97,8 @@
           <div class="projects__item-description">
             <h3 class="projects__item-header">traker</h3>
             <span class="projects__item-links">
-              <i class="fas fa-external-link-alt"></i>
-              <i class="fas fa-code"></i>
+              <i class="icon-new-tab"></i>
+              <i class="icon-embed2"></i>
             </span>
             <p>Complete client (React) and server (Node.js + Express) web application that allows the user to easily
               track daily quantifiable data - e.g. their weight, waist circumference etc.
@@ -99,8 +113,8 @@
           <div class="projects__item-description">
             <h3 class="projects__item-header">color-ui</h3>
             <span class="projects__item-links">
-              <i class="fas fa-external-link-alt"></i>
-              <i class="fas fa-code"></i>
+              <a href="https://mariczne.github.io/color-ui" class="projects__item-link"><i class="icon-new-tab"></i></a>
+              <a href="https://github.com/mariczne/color-ui" class="projects__item-link"><i class="icon-embed2"></i></a>
             </span>
             <p>Web user interface created using React; the application connects to an API that
               analyses main colours present in the image provided by the user and displays results.
@@ -116,10 +130,10 @@
             <h3 class="projects__item-header">kwiek.dev</h3>
             <span class="projects__item-links">
               <a href="https://kwiek.dev" class="projects__item-link">
-                <i class="fas fa-external-link-alt"></i>
+                <i class="icon-new-tab"></i>
               </a>
               <a href="https://github.com/mariczne/portfolio" class="projects__item-link">
-                <i class="fas fa-code"></i>
+                <i class="icon-embed2"></i>
               </a>
             </span>
             <p>The site that you are viewing right now - a personal portfolio page to showcase my projects. Made with
@@ -159,7 +173,7 @@
     <div class="footer__logobox"><img src="img/logo.png" alt="Logo"></div>
     <div class="footer__copyright">&copy; 2019 Marcin Kwiek</div>
     <div class="footer__inspired-by">inspired by<a href="https://www.youtube.com/watch?v=e9DfSCk-6Ko"
-        class="footer__ytlink"> <i class="fab fa-youtube"></i> blank vhs covers were kinda beautiful</a></div>
+        class="footer__ytlink"> <i class="icon-youtube"></i> blank vhs covers were kinda beautiful</a></div>
   </footer>
 
   <script src="js/main.js"></script>
