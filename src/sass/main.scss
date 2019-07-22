@@ -17,6 +17,7 @@ html {
   font-size: 62.5%;
   background-color: $vhs-black;
   font-family: 'Liberation Sans', 'Arial';
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 768px) {
@@ -49,6 +50,8 @@ body {
 }
 
 .container {
+  line-height: 1.3;
+
   @media (min-width: 1140px) {
     max-width: 114rem;
     margin: 0 auto;
