@@ -1,5 +1,4 @@
 .projects {
-  min-height: 75vh;
   color: $vhs-white;
   font-size: 2.4rem;
   font-weight: 500;
@@ -7,7 +6,7 @@
   margin-bottom: 10rem;
 
   &__content {
-
+    margin: 0 2rem;
   }
 
   &:target:before {
@@ -18,7 +17,7 @@
   }
 
   &__header {
-    margin: 0 2rem 4rem;
+    margin: 0 0 4rem;
   }
 
   &__item {
@@ -27,7 +26,7 @@
     background-color: $vhs-grey;
     border-radius: 3px;
     padding: 4rem;
-    margin: 4rem 2rem;
+    margin: 4rem 0;
 
     @media (max-width: 639px) {
       flex-direction: column;
@@ -42,7 +41,7 @@
     }
 
     &-description p {
-      font-size: 1.8rem;
+      font-size: 2rem;
     }
 
     &-links {
