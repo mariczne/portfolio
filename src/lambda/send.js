@@ -2,15 +2,16 @@ const apiKey = process.env.API_KEY;
 const domain = process.env.DOMAIN;
 const receiverMail = process.env.RECEIVER_MAIL;
 
-const mailgun = require('mailgun-js')({ apiKey, domain });
+const mailgun = require("mailgun-js")({ apiKey, domain });
 
 const headers = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-  'Content-Type': 'application/json',
-  'Access-Control-Allow-Methods': '*',
-  'Access-Control-Max-Age': '2592000',
-  'Access-Control-Allow-Credentials': 'true',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "Origin, X-Requested-With, Content-Type, Accept",
+  "Content-Type": "application/json",
+  "Access-Control-Allow-Methods": "*",
+  "Access-Control-Max-Age": "2592000",
+  "Access-Control-Allow-Credentials": "true"
 };
 
 function invalidRequest(callback) {
@@ -18,14 +19,14 @@ function invalidRequest(callback) {
     statusCode: 400,
     headers,
     body: JSON.stringify({
-      status: 'fail',
-      message: 'Invalid request'
+      status: "fail",
+      message: "Invalid request"
     })
   });
 }
 
 exports.handler = (event, context, callback) => {
-  if (event.httpMethod === 'OPTIONS') {
+  if (event.httpMethod === "OPTIONS") {
     return callback(null, {
       statusCode: 204,
       headers
@@ -39,7 +40,13 @@ exports.handler = (event, context, callback) => {
     return invalidRequest(callback);
   }
 
-  if (event.httpMethod != 'POST' || !event.body || !data.email || !data.name || !data.message) {
+  if (
+    event.httpMethod != "POST" ||
+    !event.body ||
+    !data.email ||
+    !data.name ||
+    !data.message
+  ) {
     return invalidRequest(callback);
   }
 
@@ -50,13 +57,13 @@ exports.handler = (event, context, callback) => {
     text: `${data.message}`
   };
 
-  mailgun.messages().send(messageData, (error) => {
+  mailgun.messages().send(messageData, error => {
     if (error) {
       return callback(null, {
         statusCode: error.statusCode,
         headers,
         body: JSON.stringify({
-          status: 'fail',
+          status: "fail",
           message: error.message
         })
       });
@@ -66,11 +73,12 @@ exports.handler = (event, context, callback) => {
         statusCode: 200,
         headers,
         body: JSON.stringify({
-          status: 'success', data: {
+          status: "success",
+          data: {
             message: messageData
           }
         })
       });
     }
-  })
-} 
+  });
+};

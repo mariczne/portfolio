@@ -16,7 +16,7 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   background-color: $vhs-black;
-  font-family: 'Liberation Sans', 'Arial';
+  font-family: "Liberation Sans", "Arial";
   scroll-behavior: smooth;
 }
 
@@ -32,13 +32,13 @@ html {
   }
 }
 
-@media(min-width: 2000px) {
+@media (min-width: 2000px) {
   html {
     font-size: 75%;
   }
 }
 
-@media(min-width: 4000px) {
+@media (min-width: 4000px) {
   html {
     font-size: 100%;
   }

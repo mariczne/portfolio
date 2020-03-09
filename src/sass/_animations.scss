@@ -15,7 +15,7 @@
 }
 
 .hero__title {
-  &-line1 {
+  &-line-top {
     animation-duration: 1.8s;
     animation-name: slideFromRight;
     animation-delay: 0.5s;
@@ -23,7 +23,7 @@
     will-change: transform;
   }
 
-  &-line2 {
+  &-line-bottom {
     animation-duration: 2s;
     animation-name: slideFromRight;
     animation-delay: 0.5s;
@@ -54,7 +54,7 @@
 @keyframes opacity {
   0% {
     opacity: 0;
-  } 
+  }
 
   100% {
     opacity: 100;
@@ -94,10 +94,12 @@
   }
 }
 
-.about, .projects, .contact {
+.about,
+.projects,
+.contact {
   transition: opacity 1s;
 }
 
 .contact-state {
-  transition: all .5s;
+  transition: all 0.5s;
 }

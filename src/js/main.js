@@ -6,7 +6,7 @@ const navigationUnderlinesObserver = new IntersectionObserver(navigationUnderlin
   { root: null, rootMargin: '-4.5% 0% 0% 0%', threshold: [0, 1] }
 );
 
-function navigationUnderlinesHandler(entries, observer) {
+function navigationUnderlinesHandler(entries) {
   entries.forEach(entry => {
     navigationUnderlines.style.display = entry.isIntersecting ? 'none' : 'block';
   })
@@ -19,7 +19,7 @@ const sectionObserver = new IntersectionObserver(sectionsHandler,
   { root: null, rootMargin: '-4.5% 0% 0% 0%', threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] }
 );
 
-function sectionsHandler(entries, observer) {
+function sectionsHandler(entries) {
   entries.forEach(entry => {
     // if a section takes 20% or more of the viewport, fade it in.
     // because of threshold every 10% intersection ratio it will not always be perfectly 20%
