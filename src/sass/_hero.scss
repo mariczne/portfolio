@@ -5,6 +5,7 @@
   color: $vhs-white;
   overflow-x: hidden;
   backface-visibility: hidden;
+  user-select: none;
 
   &__wrapper {
     position: absolute;
