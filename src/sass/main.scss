@@ -58,6 +58,24 @@ body {
   }
 }
 
+// scrollbar styling
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $vhs-grey $vhs-black;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: $vhs-black;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $vhs-grey;
+  border-radius: 20px;
+  border: 3px solid $vhs-black;
+}
+
 @import "./about";
 @import "./animations";
 @import "./contact";
