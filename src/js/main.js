@@ -51,5 +51,5 @@ const mail = document.getElementById("mail-link");
 
 mail.addEventListener("click", (e) => {
   e.preventDefault();
-  window.location.href = `mailto:${deobfusc(mail.href)}`;
+  window.location.href = deobfusc(mail.href);
 });
