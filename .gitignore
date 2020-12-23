@@ -1,6 +1,6 @@
-dist/
 node_modules/
-.cache/
-
+public/build/
+.cache
+.DS_Store
 .vscode
 .directory
