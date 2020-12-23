@@ -1,10 +1,14 @@
+<script>
+  import HeroLine from "./HeroLine.svelte";
+</script>
+
 <div class="hero">
   <div class="hero__wrapper">
     <div class="hero__name"><span>Marcin Kwiek</span></div>
     <div class="hero__lines">
-      <div class="hero__line hero__line--red" />
-      <div class="hero__line hero__line--green" />
-      <div class="hero__line hero__line--blue" />
+      <HeroLine color="red" />
+      <HeroLine color="green" />
+      <HeroLine color="blue" />
     </div>
     <div class="hero__title">
       <span class="hero__title-line-top">

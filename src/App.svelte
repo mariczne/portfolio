@@ -1,29 +1,29 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import Navigation from "./Navigation.svelte";
-  import Hero from "./Hero.svelte";
-  import About from "./About.svelte";
-  import Projects from "./Projects.svelte";
-  import Contact from "./Contact.svelte";
+  import Navigation from "./Navigation/Navigation.svelte";
+  import Hero from "./Hero/Hero.svelte";
+  import About from "./About/About.svelte";
+  import Projects from "./Projects/Projects.svelte";
+  import Contact from "./Contact/Contact.svelte";
   import mountHandler from "./mountHandler";
 
   onMount(mountHandler);
 </script>
 
-<main>
+<slot>
   <Navigation />
   <Hero />
-  <div class="container">
+  <main>
     <About />
     <Projects />
     <Contact />
-  </div>
-</main>
+  </main>
+</slot>
 
 <style lang="scss" global>
   @import "sass/main.scss";
 
-  .container {
+  main {
     line-height: 1.3;
 
     @media (min-width: 1140px) {
