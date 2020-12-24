@@ -30,3 +30,47 @@
   </div>
   <Footer />
 </section>
+
+<style>
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 100;
+    min-height: 100vh;
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: justify;
+    padding-top: 8rem;
+  }
+  .contact__header {
+    margin-bottom: 4rem;
+  }
+  .contact__content {
+    margin: 0 2rem;
+    height: 100%;
+  }
+  .contact__links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem;
+    padding: 4rem;
+  }
+  .contact__links > * {
+    font-size: 7.2rem;
+  }
+  .contact__links > a,
+  .contact__links > a:link,
+  .contact__links > a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  .contact__links > a:hover {
+    color: var(--yellow);
+  }
+
+  .contact {
+    transition: opacity 1s;
+  }
+</style>

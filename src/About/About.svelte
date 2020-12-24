@@ -67,3 +67,32 @@
     <p>I speak <strong>Polish</strong> and <strong>English</strong>.</p>
   </div>
 </section>
+
+<style>
+  .about {
+    opacity: 100;
+    color: var(--white);
+    font-size: 2.4rem;
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 10rem;
+    padding-top: 8rem;
+  }
+  .about__header--primary {
+    margin-bottom: 4rem;
+  }
+  .about__header--secondary {
+    margin: 2rem 0;
+  }
+  .about__content {
+    margin: 0 2rem;
+  }
+  .about__list {
+    margin: 1rem 0;
+    list-style: none;
+  }
+
+  .about {
+    transition: opacity 1s;
+  }
+</style>

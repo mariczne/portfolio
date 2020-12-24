@@ -1,4 +1,5 @@
 export default function () {
+  console.log("aaaaaa")
   // Navigation underline
   const heroLineBlue = document.querySelector(".hero__line--blue");
   const navigationUnderlines = <HTMLElement>(
@@ -12,6 +13,7 @@ export default function () {
 
   function navigationUnderlinesHandler(entries) {
     entries.forEach((entry) => {
+      console.log("bbbbbbb")
       navigationUnderlines.style.display = entry.isIntersecting
         ? "none"
         : "block";

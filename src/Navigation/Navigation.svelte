@@ -18,3 +18,25 @@
     <NavigationUnderline color="blue" />
   </div>
 </nav>
+
+<style>
+  .navigation {
+    font-weight: 700;
+    background-color: var(--black);
+    display: block;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+  }
+
+  .navigation__underlines {
+    display: none;
+    font-size: 0px;
+  }
+
+  .navigation {
+    animation: opacity 1s 2.5s;
+    animation-fill-mode: backwards;
+  }
+
+</style>

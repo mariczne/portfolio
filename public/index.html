@@ -1,31 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset='utf-8'>
-	<meta name='viewport' content='width=device-width,initial-scale=1'>
-	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-	<meta name="description" content="Marcin Kwiek - portfolio webpage" />
-	<meta name="keywords" content="web,developer,react,javascript,frontend" />
-	<meta name="author" content="Marcin Kwiek" />
-	<meta name="msapplication-TileColor" content="#121316" />
-	<meta name="theme-color" content="#121316" />
-	<title>kwiek.dev / Marcin Kwiek / web developer</title>
-	
-	<!-- <link rel="stylesheet" href="fonts/icomoon.css" /> -->
-	<!-- <link rel="stylesheet" href="sass/main.scss" /> -->
-	<!-- <link rel="shortcut icon" type="image/png" href="img/favicon.ico" /> -->
-	
-	<link
-		rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap"/>
-	<!-- <link rel='icon' type='image/png' href='/favicon.ico'> -->
-	<link rel="shortcut icon" type="image/png" href="favicon.ico" />
-	<link rel='stylesheet' href='/global.css'>
-	<link rel='stylesheet' href='/build/bundle.css'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Marcin Kwiek - portfolio webpage">
+    <meta name="keywords" content="web,developer,react,javascript,frontend">
+    <meta name="author" content="Marcin Kwiek">
+    <meta name="msapplication-TileColor" content="#121316">
+    <meta name="theme-color" content="#121316">
+    <title>kwiek.dev / Marcin Kwiek / web developer</title>
+    <!-- <link rel="stylesheet" href="fonts/icomoon.css" /> -->
+    <!-- <link rel="stylesheet" href="sass/main.scss" /> -->
+    <!-- <link rel="shortcut icon" type="image/png" href="img/favicon.ico" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap">
+    <!-- <link rel='icon' type='image/png' href='/favicon.ico'> -->
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/build/bundle.css">
+    <!-- <script defer src="/build/bundle.js"></script> -->
+  </head>
+  <body>
+    <nav class="navigation svelte-ohu6lr">
+      <a href="#about" class="navigation__link svelte-1qm3d6p">About me</a>
+      <a href="#projects" class="navigation__link svelte-1qm3d6p">Projects</a>
+      <a href="#contact" class="navigation__link svelte-1qm3d6p">Contact</a>
+      <a href="https://github.com/mariczne" class="navigation__link svelte-1qm3d6p">
+        <svg width="24" height="24" stroke="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" x="3082" data-attributes-set=",xmlns,viewBox,preserveAspectRatio,x,xmlns,viewBox,preserveAspectRatio,x">
+          <title xmlns="http://www.w3.org/2000/svg">GitHub icon</title>
+          <path xmlns="http://www.w3.org/2000/svg" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+        </svg>
+      </a>
+      <div class="navigation__underlines svelte-ohu6lr">
+        <div class="navigation__underline navigation__underline--red svelte-e6l2xz"></div>
+        <div class="navigation__underline navigation__underline--green svelte-e6l2xz"></div>
+        <div class="navigation__underline navigation__underline--blue svelte-e6l2xz"></div>
+      </div>
+    </nav>
+    <div class="hero svelte-7z5l0y">
+      <div class="hero__wrapper svelte-7z5l0y">
+        <div class="hero__name svelte-7z5l0y">
+          <span>Marcin Kwiek</span>
+        </div>
+        <div class="hero__lines svelte-7z5l0y">
+          <div class="hero__line hero__line--red svelte-1wgm6oa"></div>
+          <div class="hero__line hero__line--green svelte-1wgm6oa"></div>
+          <div class="hero__line hero__line--blue svelte-1wgm6oa"></div>
+        </div>
+        <div class="hero__title svelte-7z5l0y">
+          <span class="hero__title-line-top svelte-7z5l0y">
+            web
+            <span class="hero__title--small svelte-7z5l0y">front·end</span>
+          </span>
+          <br>
+          <span class="hero__title-line-bottom svelte-7z5l0y">developer</span>
+        </div>
+      </div>
+    </div>
+    <main>
+      <section class="about svelte-1g6pmnp" id="about">
+        <div class="about__content svelte-1g6pmnp">
+          <h2 class="about__header--primary svelte-1g6pmnp">About me</h2>
+          <p>
+            Hi, my name is
+            <strong>Marcin</strong>
+            . I primarily build
+            <strong>user interfaces</strong>
+            , but I also work with server-side
+      technologies.
+            <br>
+            My journey with web development began in mid-2018 and I&#39;ve been learning
+      something new every day since. I enjoy solving problems and seeing
+      the effect of my work gives me a lot of satisfaction.
+          </p>
+          <h3 class="about__header--secondary svelte-1g6pmnp">Technologies that I have experience with:</h3>
+          <h4>On the front-end, I use:</h4>
+          <ul class="about__list svelte-1g6pmnp">
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" fill="#e44f26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30 5.902 27.201z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#f1662a" d="M16 27.858l8.17-2.265 1.922-21.532H16v23.797z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#ebebeb" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16v-3.091zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004v-3.216z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.757.046-.522.726-8.137.076-.83h-7.185zm0-6.256v3.091h7.466l.062-.694.141-1.567.074-.83h-7.743z"></path>
+              </svg>
+              HTML
+            </li>
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" fill="#1572b6" d="M5.902 27.201L3.656 2h24.688l-2.249 25.197L15.985 30 5.902 27.201z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#33a9dc" d="M16 27.858l8.17-2.265 1.922-21.532H16v23.797z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M16 13.191h4.09l.282-3.165H16V6.935h7.75l-.074.829-.759 8.518H16v-3.091z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#ebebeb" d="M16.019 21.218l-.014.004-3.442-.93-.22-2.465H9.24l.433 4.853 6.331 1.758.015-.004v-3.216z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#fff" d="M19.827 16.151l-.372 4.139-3.447.93v3.216l6.336-1.756.047-.522.537-6.007h-3.101z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" fill="#ebebeb" d="M16.011 6.935v3.091H8.545l-.062-.695-.141-1.567-.074-.829h7.743zM16 13.191v3.091h-3.399l-.062-.695-.14-1.567-.074-.829H16z"></path>
+              </svg>
+              CSS (SASS)
+            </li>
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" d="M23.827 8.243a4.424 4.424 0 012.223 1.281 5.853 5.853 0 01.852 1.143c.011.045-1.534 1.083-2.471 1.662-.034.023-.169-.124-.322-.35a2.014 2.014 0 00-1.67-1c-1.077-.074-1.771.49-1.766 1.433a1.3 1.3 0 00.153.666c.237.49.677.784 2.059 1.383 2.544 1.095 3.636 1.817 4.31 2.843a5.158 5.158 0 01.416 4.333 4.764 4.764 0 01-3.932 2.815 10.9 10.9 0 01-2.708-.028 6.531 6.531 0 01-3.616-1.884 6.278 6.278 0 01-.926-1.371 2.655 2.655 0 01.327-.208c.158-.09.756-.434 1.32-.761l1.024-.6.214.312a4.771 4.771 0 001.35 1.292 3.3 3.3 0 003.458-.175 1.545 1.545 0 00.2-1.974c-.276-.395-.84-.727-2.443-1.422a8.8 8.8 0 01-3.349-2.055 4.687 4.687 0 01-.976-1.777 7.116 7.116 0 01-.062-2.268 4.332 4.332 0 013.644-3.374 9 9 0 012.691.084zm-8.343 1.483l.011 1.454h-4.63v13.148H7.6V11.183H2.97V9.755a13.986 13.986 0 01.04-1.466c.017-.023 2.832-.034 6.245-.028l6.211.017z" fill="#007acc"></path>
+              </svg>
+              TypeScript/JavaScript
+            </li>
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <circle xmlns="http://www.w3.org/2000/svg" cx="16" cy="15.974" r="2.5" fill="#00d8ff"></circle>
+                <path xmlns="http://www.w3.org/2000/svg" d="M16 21.706a28.385 28.385 0 01-8.88-1.2 11.3 11.3 0 01-3.657-1.958A3.543 3.543 0 012 15.974c0-1.653 1.816-3.273 4.858-4.333A28.755 28.755 0 0116 10.293a28.674 28.674 0 019.022 1.324 11.376 11.376 0 013.538 1.866A3.391 3.391 0 0130 15.974c0 1.718-2.03 3.459-5.3 4.541a28.8 28.8 0 01-8.7 1.191zm0-10.217a27.948 27.948 0 00-8.749 1.282c-2.8.977-4.055 2.313-4.055 3.2 0 .928 1.349 2.387 4.311 3.4A27.21 27.21 0 0016 20.51a27.6 27.6 0 008.325-1.13C27.4 18.361 28.8 16.9 28.8 15.974a2.327 2.327 0 00-1.01-1.573 10.194 10.194 0 00-3.161-1.654A27.462 27.462 0 0016 11.489z" fill="#00d8ff"></path>
+                <path xmlns="http://www.w3.org/2000/svg" d="M10.32 28.443a2.639 2.639 0 01-1.336-.328c-1.432-.826-1.928-3.208-1.327-6.373a28.755 28.755 0 013.4-8.593 28.676 28.676 0 015.653-7.154 11.376 11.376 0 013.384-2.133 3.391 3.391 0 012.878 0c1.489.858 1.982 3.486 1.287 6.859a28.806 28.806 0 01-3.316 8.133 28.385 28.385 0 01-5.476 7.093 11.3 11.3 0 01-3.523 2.189 4.926 4.926 0 01-1.624.307zm1.773-14.7a27.948 27.948 0 00-3.26 8.219c-.553 2.915-.022 4.668.75 5.114.8.463 2.742.024 5.1-2.036a27.209 27.209 0 005.227-6.79 27.6 27.6 0 003.181-7.776c.654-3.175.089-5.119-.713-5.581a2.327 2.327 0 00-1.868.089A10.194 10.194 0 0017.5 6.9a27.464 27.464 0 00-5.4 6.849z" fill="#00d8ff"></path>
+                <path xmlns="http://www.w3.org/2000/svg" d="M21.677 28.456c-1.355 0-3.076-.82-4.868-2.361a28.756 28.756 0 01-5.747-7.237 28.676 28.676 0 01-3.374-8.471 11.376 11.376 0 01-.158-4A3.391 3.391 0 018.964 3.9c1.487-.861 4.01.024 6.585 2.31a28.8 28.8 0 015.39 6.934 28.384 28.384 0 013.41 8.287 11.3 11.3 0 01.137 4.146 3.543 3.543 0 01-1.494 2.555 2.59 2.59 0 01-1.315.324zm-9.58-10.2a27.949 27.949 0 005.492 6.929c2.249 1.935 4.033 2.351 4.8 1.9.8-.465 1.39-2.363.782-5.434A27.212 27.212 0 0019.9 13.74a27.6 27.6 0 00-5.145-6.64c-2.424-2.152-4.39-2.633-5.191-2.169a2.327 2.327 0 00-.855 1.662 10.194 10.194 0 00.153 3.565 27.465 27.465 0 003.236 8.1z" fill="#00d8ff"></path>
+              </svg>
+              React
+            </li>
+          </ul>
+          <h4>On the back-end, I work with:</h4>
+          <ul class="about__list svelte-1g6pmnp">
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" d="M16 30a2.151 2.151 0 01-1.076-.288L11.5 27.685c-.511-.286-.262-.387-.093-.446a6.828 6.828 0 001.549-.7.263.263 0 01.255.019l2.631 1.563a.34.34 0 00.318 0l10.26-5.922a.323.323 0 00.157-.278V10.075a.331.331 0 00-.159-.283l-10.26-5.917a.323.323 0 00-.317 0L5.587 9.794a.33.33 0 00-.162.281v11.841a.315.315 0 00.161.274L8.4 23.814c1.525.762 2.459-.136 2.459-1.038V11.085a.3.3 0 01.3-.3h1.3a.3.3 0 01.3.3v11.692c0 2.035-1.108 3.2-3.038 3.2a4.389 4.389 0 01-2.363-.642l-2.697-1.547a2.166 2.166 0 01-1.076-1.872V10.075A2.162 2.162 0 014.661 8.2l10.261-5.924a2.246 2.246 0 012.156 0L27.338 8.2a2.165 2.165 0 011.077 1.87v11.846a2.171 2.171 0 01-1.077 1.872l-10.26 5.924A2.152 2.152 0 0116 30z" fill="#83cd29"></path>
+                <path xmlns="http://www.w3.org/2000/svg" d="M14.054 17.953a.3.3 0 01.3-.3h1.327a.3.3 0 01.295.251c.2 1.351.8 2.032 3.513 2.032 2.161 0 3.082-.489 3.082-1.636 0-.661-.261-1.152-3.62-1.481-2.808-.278-4.544-.9-4.544-3.144 0-2.07 1.745-3.305 4.67-3.305 3.287 0 4.914 1.141 5.12 3.589a.3.3 0 01-.295.323h-1.336a.3.3 0 01-.288-.232c-.319-1.421-1.1-1.875-3.2-1.875-2.36 0-2.634.822-2.634 1.438 0 .746.324.964 3.51 1.385 3.153.417 4.651 1.007 4.651 3.223 0 2.236-1.864 3.516-5.115 3.516-4.495.006-5.436-2.055-5.436-3.784z" fill="#83cd29"></path>
+              </svg>
+              Node.js with Express
+            </li>
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" d="M8.562 15.256A21.159 21.159 0 0016 16.449a21.159 21.159 0 007.438-1.194c1.864-.727 2.525-1.535 2.525-2V9.7a10.357 10.357 0 01-2.084 1.076A22.293 22.293 0 0116 12.078a22.36 22.36 0 01-7.879-1.3A10.28 10.28 0 016.037 9.7v3.55c0 .474.663 1.278 2.525 2.006zm0 6.705a15.611 15.611 0 002.6.741 24.9 24.9 0 004.838.453 24.9 24.9 0 004.838-.452 15.614 15.614 0 002.6-.741c1.864-.727 2.525-1.535 2.525-2v-3.39a10.706 10.706 0 01-1.692.825A23.49 23.49 0 0116 18.74a23.49 23.49 0 01-8.271-1.348 10.829 10.829 0 01-1.692-.825v3.393c0 .466.663 1.271 2.525 2.001zM16 30c5.5 0 9.963-1.744 9.963-3.894v-2.837a10.5 10.5 0 01-1.535.762l-.157.063A23.487 23.487 0 0116 25.445a23.422 23.422 0 01-8.271-1.351c-.054-.02-.106-.043-.157-.063a10.5 10.5 0 01-1.535-.762v2.837C6.037 28.256 10.5 30 16 30z" fill="#ffda44"></path>
+                <ellipse xmlns="http://www.w3.org/2000/svg" cx="16" cy="5.894" rx="9.963" ry="3.894" fill="#ffda44"></ellipse>
+              </svg>
+              SQL or MongoDB
+            </li>
+          </ul>
+          <h4>I also use:</h4>
+          <ul class="about__list svelte-1g6pmnp">
+            <li>
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" d="M29.472 14.753L17.247 2.528a1.8 1.8 0 00-2.55 0l-2.539 2.539 3.22 3.22a2.141 2.141 0 012.712 2.73l3.1 3.1a2.143 2.143 0 11-1.285 1.21l-2.895-2.895v7.617a2.141 2.141 0 11-1.764-.062V12.3a2.146 2.146 0 01-1.165-2.814l-3.17-3.172L2.528 14.7a1.8 1.8 0 000 2.551l12.225 12.221a1.8 1.8 0 002.55 0L29.472 17.3a1.8 1.8 0 000-2.551" fill="#dd4c35"></path>
+                <path xmlns="http://www.w3.org/2000/svg" d="M12.158 5.067l3.22 3.22a2.141 2.141 0 012.712 2.73l3.1 3.1a2.143 2.143 0 11-1.285 1.21l-2.895-2.895v7.617a2.141 2.141 0 11-1.764-.062V12.3a2.146 2.146 0 01-1.165-2.814l-3.17-3.172" fill="#fff"></path>
+              </svg>
+              git
+            </li>
+            <li>Linux</li>
+          </ul>
+          <p>
+            I speak
+            <strong>Polish</strong>
+            and
+            <strong>English</strong>
+            .
+          </p>
+        </div>
+      </section>
+      <section class="projects svelte-m5efrn" id="projects">
+        <div class="projects__content svelte-m5efrn">
+          <h2 class="projects__header svelte-m5efrn">Projects</h2>
+          <div class="projects__item svelte-d412kf">
+            <div class="projects__item-imagebox svelte-d412kf">
+              <a href="https://www.eqtherm.pl">
+                <img src="img/project1.jpg" alt="eqtherm" class="projects__item-image svelte-d412kf">
+              </a>
+            </div>
+            <div class="projects__item-description svelte-d412kf">
+              <h3 class="projects__item-header">EQTHERM.pl</h3>
+              <span class="projects__item-links svelte-d412kf">
+                <a href="https://www.eqtherm.pl" class="projects__item-link svelte-d412kf">
+                  <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                    <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </span>
+              <p class="svelte-d412kf">Commercial project made using Gatsby.js; a modern website for a
+      company that will allow easy contact and show the company&#39;s line of
+      products, with special emphasis on speed and ease of use.</p>
+            </div>
+          </div>
+          <div class="projects__item svelte-d412kf">
+            <div class="projects__item-imagebox svelte-d412kf">
+              <a href="https://mariczne.github.io/color-ui">
+                <img src="img/project2.jpg" alt="color-ui" class="projects__item-image svelte-d412kf">
+              </a>
+            </div>
+            <div class="projects__item-description svelte-d412kf">
+              <h3 class="projects__item-header">color-ui</h3>
+              <span class="projects__item-links svelte-d412kf">
+                <a href="https://mariczne.github.io/color-ui" class="projects__item-link svelte-d412kf">
+                  <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                    <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+              </span>
+              <p class="svelte-d412kf">Web user interface created using React; the application connects to an
+      API that analyses main colours present in the image provided by the
+      user and displays results.</p>
+            </div>
+          </div>
+          <div class="projects__item svelte-d412kf">
+            <div class="projects__item-imagebox svelte-d412kf">
+              <a href="https://www.kwiek.dev">
+                <img src="img/project3.png" alt="kwiek.dev" class="projects__item-image svelte-d412kf">
+              </a>
+            </div>
+            <div class="projects__item-description svelte-d412kf">
+              <h3 class="projects__item-header">kwiek.dev</h3>
+              <span class="projects__item-links svelte-d412kf">
+                <a href="https://www.kwiek.dev" class="projects__item-link svelte-d412kf">
+                  <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                    <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"></path>
+                  </svg>
+                </a>
+                <a href="https://github.com/mariczne/portfolio" class="projects__item-link svelte-d412kf">
+                  <svg width="24" height="24" stroke="currentColor" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                    <path xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                  </svg>
+                </a>
+              </span>
+              <p class="svelte-d412kf">The site that you are viewing right now - a personal portfolio page to
+      showcase my projects. Made with pure HTML, CSS and JavaScript with no
+      external libraries.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact svelte-13c71el" id="contact">
+        <div class="contact__content svelte-13c71el">
+          <h2 class="contact__header svelte-13c71el">Contact</h2>
+          <p>If you are interested in my services, would like to collaborate or simply
+      have a question, feel free to contact me using one of the following:</p>
+          <div class="contact__links svelte-13c71el">
+            <a href="mailto:mxaxxrzzcyyin@kwzzixeyyk.dev" id="mail-link" class="svelte-13c71el">
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" x="47882" data-attributes-set=",xmlns,viewBox,preserveAspectRatio,x,xmlns,viewBox,preserveAspectRatio,x">
+                <path xmlns="http://www.w3.org/2000/svg" d="M0 0h24v24H0z" fill="none"></path>
+                <path xmlns="http://www.w3.org/2000/svg" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+              </svg>
+            </a>
+            <a href="https://m.me/marcin.kwiekk" class="svelte-13c71el">
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" fill="none" d="M0 0h24v24H0z"></path>
+                <path xmlns="http://www.w3.org/2000/svg" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/marcin-kwiek/" class="svelte-13c71el">
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,xmlns:xlink,xmlns,viewBox,preserveAspectRatio">
+                <path xmlns="http://www.w3.org/2000/svg" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/mariczne" class="svelte-13c71el">
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" x="3082" data-attributes-set=",xmlns,viewBox,preserveAspectRatio,x,xmlns,viewBox,preserveAspectRatio,x">
+                <title xmlns="http://www.w3.org/2000/svg">GitHub icon</title>
+                <path xmlns="http://www.w3.org/2000/svg" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <footer class="footer svelte-1tcorrx">
+          <div class="footer__logobox svelte-1tcorrx">
+            <img src="img/logo.png" alt="Logo" class="svelte-1tcorrx">
+          </div>
+          <div class="footer__copyright svelte-1tcorrx">© 2019 Marcin Kwiek</div>
+          <div class="footer__inspired-by svelte-1tcorrx">
+            inspired by
+            <a href="https://www.youtube.com/watch?v=e9DfSCk-6Ko" class="footer__ytlink svelte-1tcorrx">
+              <svg width="24" height="24" stroke="none" fill="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" preserveaspectratio="xMidYMid meet" x="8138" data-attributes-set=",xmlns:xlink,xmlns,viewBox,preserveAspectRatio,x,xmlns:xlink,xmlns,viewBox,preserveAspectRatio,x">
+                <title xmlns="http://www.w3.org/2000/svg">YouTube icon</title>
+                <path xmlns="http://www.w3.org/2000/svg" d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path>
+              </svg>
+              blank vhs covers were kinda beautiful
+            </a>
+          </div>
+        </footer>
+      </section>
+    </main>
+    <script>
+      function default_1() {
+        console.log("aaaaaa");
+        // Navigation underline
+        var heroLineBlue = document.querySelector(".hero__line--blue");
+        var navigationUnderlines = document.querySelector(
+          ".navigation__underlines"
+        );
+        var navigationUnderlinesObserver = new IntersectionObserver(
+          navigationUnderlinesHandler, {
+            root: null,
+            rootMargin: "-4.5% 0% 0% 0%",
+            threshold: [0, 1]
+          }
+        );
 
-	<script defer src='/build/bundle.js'></script>
-</head>
+        function navigationUnderlinesHandler(entries) {
+          entries.forEach(function (entry) {
+            console.log("bbbbbbb");
+            navigationUnderlines.style.display = entry.isIntersecting ?
+              "none" :
+              "block";
+          });
+        }
+        navigationUnderlinesObserver.observe(heroLineBlue);
+        // Sections fade in/out
+        var sectionObserver = new IntersectionObserver(sectionsHandler, {
+          root: null,
+          rootMargin: "-4.5% 0% 0% 0%",
+          threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+        });
 
-<body>
-</body>
+        function sectionsHandler(entries) {
+          entries.forEach(function (entry) {
+            // if a section takes 20% or more of the viewport, fade it in
+            // because of threshold every 10% intersection ratio
+            // it will not always be perfectly 20%
+            // (also intersection ratio is different to what I'm targeting:
+            // it's % of element visible, not element taking % of viewport)
+            entry.target.style.opacity =
+              entry.intersectionRect.height / entry.rootBounds.height >= 0.2 ?
+              100 :
+              0;
+          });
+        }
+        var sections = document.querySelectorAll("section");
+        sections.forEach(function (section) {
+          sectionObserver.observe(section);
+        });
+        // Spambot prevention
+        function deobfusc(input) {
+          return input.replace(/x|y|z/g, "");
+        }
+        var mail = document.getElementById("mail-link");
+        mail.addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = deobfusc(mail.href);
+        });
+      }
+      if (typeof window !== "undefined") {
+        document.addEventListener("DOMContentLoaded", default_1);
+      }
+    </script>
+  </body>
 </html>

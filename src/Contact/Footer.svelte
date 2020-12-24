@@ -14,3 +14,29 @@
     </a>
   </div>
 </footer>
+
+<style>
+  .footer {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .footer__logobox img {
+    padding-top: 1rem;
+    max-width: 2rem;
+  }
+  .footer__copyright {
+    padding: 1rem;
+    color: #ddd;
+  }
+  .footer__inspired-by {
+    padding-bottom: 1rem;
+    color: #666;
+  }
+
+  .footer__ytlink,
+  .footer__ytlink:link,
+  .footer__ytlink:visited {
+    color: #aaa;
+    text-decoration: none;
+  }
+</style>
