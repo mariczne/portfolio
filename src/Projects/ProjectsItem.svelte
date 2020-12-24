@@ -31,3 +31,65 @@
     <p>{description}</p>
   </div>
 </div>
+
+<style>
+  .projects__item {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--grey);
+    border-radius: 3px;
+    padding: 4rem;
+    margin: 4rem 0;
+  }
+  @media (max-width: 639px) {
+    .projects__item {
+      flex-direction: column;
+    }
+  }
+  .projects__item-description {
+    flex-basis: 70%;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .projects__item-description p {
+    font-size: 2rem;
+  }
+  .projects__item-links {
+    margin: 1rem 0 1rem 0.2rem;
+  }
+  .projects__item-link,
+  .projects__item-link:link,
+  .projects__item-link:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  .projects__item-link:hover {
+    color: var(--yellow);
+  }
+  .projects__item-imagebox {
+    position: relative;
+    margin-right: 2rem;
+    flex-basis: 30%;
+    flex-shrink: 0;
+  }
+  @media (max-width: 639px) {
+    .projects__item-imagebox {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+  .projects__item-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  @media (min-width: 640px) {
+    .projects__item-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+</style>
