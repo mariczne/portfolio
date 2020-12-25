@@ -1,8 +1,12 @@
+<script>
+  export let size = 24;
+</script>
+
 <svg
-  width="24"
-  height="24"
+  width={size}
+  height={size}
   stroke="none"
-  fill="currentColor"
+  fill="var(--red)"
   xmlns:xlink="http://www.w3.org/1999/xlink"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 24 24"

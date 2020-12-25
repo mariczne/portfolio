@@ -1,6 +1,6 @@
 <script>
-  import CodeIcon from "../icons/CodeIcon.svelte";
-  import LinkIcon from "../icons/LinkIcon.svelte";
+  import CodeIcon from "../components/Icon//CodeIcon.svelte";
+  import LinkIcon from "../components/Icon//LinkIcon.svelte";
 
   export let href;
   export let imgSrc;
@@ -68,11 +68,6 @@
     min-height: 48px;
     color: inherit;
     text-decoration: none;
-  }
-
-  .icon {
-    width: 32px;
-    height: 32px;
   }
 
   .projects__item-link:hover {

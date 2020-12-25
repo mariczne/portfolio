@@ -1,14 +1,14 @@
 <script lang="ts">
+  import Section from "../components/Section.svelte";
   import Footer from "./Footer.svelte";
-  import GithubIcon from "../icons/GithubIcon.svelte";
-  import FacebookIcon from "../icons/FacebookIcon.svelte";
-  import LinkedinIcon from "../icons/LinkedinIcon.svelte";
-  import MailIcon from "../icons/MailIcon.svelte";
+  import GithubIcon from "../components/Icon//GithubIcon.svelte";
+  import FacebookIcon from "../components/Icon//FacebookIcon.svelte";
+  import LinkedinIcon from "../components/Icon//LinkedinIcon.svelte";
+  import MailIcon from "../components/Icon//MailIcon.svelte";
 </script>
 
-<section class="contact" id="contact">
+<Section id="contact" headerText="Contact">
   <div class="contact__content">
-    <h2 class="contact__header">Contact</h2>
     <p>
       If you are interested in my services, would like to collaborate or simply
       have a question, feel free to contact me using one of the following:
@@ -29,27 +29,11 @@
     </div>
   </div>
   <Footer />
-</section>
+</Section>
 
 <style>
-  .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    opacity: 100;
-    min-height: 100vh;
-    color: var(--white);
-    font-size: 2.4rem;
-    font-weight: 500;
-    text-align: justify;
-    padding-top: 8rem;
-  }
-  .contact__header {
-    margin-bottom: 4rem;
-  }
   .contact__content {
-    margin: 0 2rem;
-    height: 100%;
+    flex-grow: 1;
   }
   .contact__links {
     display: flex;
@@ -68,9 +52,5 @@
   }
   .contact__links > a:hover {
     color: var(--yellow);
-  }
-
-  .contact {
-    transition: opacity 1s;
   }
 </style>

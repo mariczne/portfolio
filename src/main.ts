@@ -3,7 +3,7 @@ export default (function () {
     // Navigation underline
     const heroLineBlue = document.querySelector(".hero__line--blue");
     const navigationUnderlines = <HTMLElement>(
-      document.querySelector(".navigation__underlines")
+      document.querySelector(".underlines")
     );
 
     const navigationUnderlinesObserver = new IntersectionObserver(
@@ -17,7 +17,7 @@ export default (function () {
           ? "none"
           : "block";
       });
-    }
+    } 
 
     navigationUnderlinesObserver.observe(heroLineBlue);
 
