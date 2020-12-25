@@ -1,39 +1,23 @@
-// https://github.com/vladshcherbin/rollup-plugin-svelte-static-html
 import vm from "vm";
 import fs from "fs-extra";
 import { rollup } from "rollup";
-import resolve from "rollup-plugin-node-resolve";
+import resolve from "@rollup/plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
 import posthtml from "posthtml";
 import beautify from "posthtml-beautify";
 import insertAt from "posthtml-insert-at";
-import csss from "rollup-plugin-css-only";
-import typescript from "@rollup/plugin-typescript";
-import imagemin from "rollup-plugin-imagemin";
+import css from "rollup-plugin-css-only";
+import smartAsset from "rollup-plugin-smart-asset";
 
-function formatCss(css) {
-  return css.replace("}\n", "}");
-}
-
-async function generateHtmlTemplate(template, html, css, inlineCss) {
+async function generateHtmlTemplate(template) {
   if (template) {
     return fs.readFile(template, "utf8");
   }
-
-  return inlineCss && css ? `<style>${formatCss(css)}</style>${html}` : html;
 }
 
 export default function svelteStaticHtml(options = {}) {
-  const {
-    component,
-    inlineCss = false,
-    output,
-    preprocess,
-    props,
-    selector = "body",
-    template,
-  } = options;
+  const { component, output, template } = options;
 
   if (!component) {
     throw new Error(
@@ -53,38 +37,26 @@ export default function svelteStaticHtml(options = {}) {
         plugins: [
           resolve(),
           svelte({
-            preprocess: preprocess || sveltePreprocess(),
+            preprocess: sveltePreprocess(),
             compilerOptions: {
               generate: "ssr",
             },
           }),
-          imagemin(),
-          csss({ output: "bundle.css" }),
-          typescript(),
+          css(),
+          smartAsset(),
         ],
       });
       const bundle = await generate({ format: "cjs" });
+      // console.log(bundle);
       const entryChunk = bundle.output.find(
         (chunkOrAsset) => chunkOrAsset.isEntry
       );
       const Component = vm.runInNewContext(entryChunk.code, { module });
-      const { css, html } = Component.render(props);
-      const htmlTemplate = await generateHtmlTemplate(
-        template,
-        html,
-        css.code,
-        inlineCss
-      );
+      const { html } = Component.render();
+      const htmlTemplate = await generateHtmlTemplate(template, html);
       const processedHtml = await posthtml(
         [
-          template && insertAt({ selector, prepend: html }),
-          template &&
-            inlineCss &&
-            css.code &&
-            insertAt({
-              selector: "head",
-              append: `<style>${formatCss(css.code)}</style>`,
-            }),
+          template && insertAt({ selector: "body", prepend: html }),
           beautify({
             rules: {
               blankLines: false,
@@ -93,7 +65,18 @@ export default function svelteStaticHtml(options = {}) {
         ].filter(Boolean)
       ).process(htmlTemplate);
 
-      await fs.outputFile(output, processedHtml.html);
+      await fs.outputFile(`${output}/index.html`, processedHtml.html);
+
+      // await bundle.write()
+
+      const styles = bundle.output.find(
+        (chunkOrAsset) => chunkOrAsset.fileName === "bundle.css"
+      );
+      // console.log(styles)
+
+      await fs.outputFile(`${output}/bundle.css`, styles.source);
+
+      bundle.output.forEach(chunkOrAsset => console.log(chunkOrAsset.fileName))
     },
   };
 }
