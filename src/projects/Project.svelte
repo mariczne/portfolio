@@ -17,7 +17,7 @@
     </a>
   </div>
   <div class="projects__item-description">
-    <h3 class="projects__item-header">{name}</h3>
+    <h3>{name}</h3>
     <span class="projects__item-links">
       <a {href} class="projects__item-link">
         <LinkIcon size={32} />

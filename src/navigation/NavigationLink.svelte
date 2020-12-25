@@ -2,12 +2,12 @@
   export let href;
 </script>
 
-<a {href} class="navigation__link"><slot /></a>
+<a {href} ><slot /></a>
 
 <style>
-  .navigation__link,
-  .navigation__link:link,
-  .navigation__link:visited {
+  a,
+  a:link,
+  a:visited {
     display: inline-block;
     font-size: 2rem;
     line-height: 2rem;
@@ -17,7 +17,7 @@
     margin: 1rem 2rem;
     vertical-align: middle;
   }
-  .navigation__link:hover {
+  a:hover {
     color: var(--yellow);
   }
 </style>
