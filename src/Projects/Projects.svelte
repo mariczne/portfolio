@@ -3,6 +3,9 @@
   import eqtherm from "./eqtherm.jpg";
   import colorui from "./colorui.jpg";
   import kwiekdev from "./kwiekdev.png";
+  // const eqtherm = "/build/eqtherm-9331196704213161.jpg"
+  // const colorui = "/build/colorui-2d4dbf34e16c90ae.jpg"
+  // const kwiekdev = "/build/kwiekdev-e2532d3e79bdd315.png"
 </script>
 
 <section id="projects">
