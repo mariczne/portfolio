@@ -1,5 +1,4 @@
 <script>
-  import Image from "svelte-image"
   import CodeIcon from "../icons/CodeIcon.svelte";
   import LinkIcon from "../icons/LinkIcon.svelte";
 
@@ -14,18 +13,18 @@
 <div class="projects__item">
   <div class="projects__item-imagebox">
     <a {href}>
-      <Image src={imgSrc} alt={imgAlt || name} class="projects__item-image" />
+      <img src={imgSrc} alt={imgAlt || name} class="projects__item-image" />
     </a>
   </div>
   <div class="projects__item-description">
     <h3 class="projects__item-header">{name}</h3>
     <span class="projects__item-links">
       <a {href} class="projects__item-link">
-        <LinkIcon />
+        <LinkIcon size={32} />
       </a>
       {#if repoHref}
         <a href={repoHref} class="projects__item-link">
-          <CodeIcon />
+          <CodeIcon size={32} />
         </a>
       {/if}
     </span>
@@ -63,9 +62,19 @@
   .projects__item-link,
   .projects__item-link:link,
   .projects__item-link:visited {
+    display: inline-flex;
+    align-items: center;
+    min-width: 48px;
+    min-height: 48px;
     color: inherit;
     text-decoration: none;
   }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
   .projects__item-link:hover {
     color: var(--yellow);
   }

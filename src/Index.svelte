@@ -1,9 +1,9 @@
 <script lang="ts">
-  import Navigation from "./Navigation/Navigation.svelte";
-  import Hero from "./Hero/Hero.svelte";
-  import About from "./About/About.svelte";
-  import Projects from "./Projects/Projects.svelte";
-  import Contact from "./Contact/Contact.svelte";
+  import Navigation from "./navigation/Navigation.svelte";
+  import Hero from "./hero/Hero.svelte";
+  import About from "./about/About.svelte";
+  import Projects from "./projects/Projects.svelte";
+  import Contact from "./contact/Contact.svelte";
 </script>
 
 <slot>

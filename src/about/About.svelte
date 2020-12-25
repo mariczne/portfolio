@@ -95,4 +95,14 @@
   .about {
     transition: opacity 1s;
   }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  ul li {
+    display: inline-flex;
+    align-items: center;
+  }
 </style>

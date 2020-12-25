@@ -1,11 +1,5 @@
 <script>
   import ProjectsItem from "./ProjectsItem.svelte";
-  import eqtherm from "./eqtherm.jpg";
-  import colorui from "./colorui.jpg";
-  import kwiekdev from "./kwiekdev.png";
-  // const eqtherm = "/build/eqtherm-9331196704213161.jpg"
-  // const colorui = "/build/colorui-2d4dbf34e16c90ae.jpg"
-  // const kwiekdev = "/build/kwiekdev-e2532d3e79bdd315.png"
 </script>
 
 <section id="projects">
@@ -14,7 +8,7 @@
     <ProjectsItem
       name="EQTHERM.pl"
       href="https://www.eqtherm.pl"
-      imgSrc={eqtherm}
+      imgSrc="static/eqtherm.png"
       imgAlt="eqtherm"
       description="Commercial project made using Gatsby.js; a modern website for a
       company that will allow easy contact and show the company's line of
@@ -23,8 +17,8 @@
     <ProjectsItem
       name="color-ui"
       href="https://mariczne.github.io/color-ui"
-      repohref="https://github.com/mariczne/color-ui"
-      imgSrc={colorui}
+      repoHref="https://github.com/mariczne/color-ui"
+      imgSrc="static/colorui.png"
       description="Web user interface created using React; the application connects to an
       API that analyses main colours present in the image provided by the
       user and displays results." />
@@ -33,7 +27,7 @@
       name="kwiek.dev"
       href="https://www.kwiek.dev"
       repoHref="https://github.com/mariczne/portfolio"
-      imgSrc={kwiekdev}
+      imgSrc="static/kwiekdev.png"
       description="The site that you are viewing right now - a personal portfolio page to
       showcase my projects. Made with pure HTML, CSS and JavaScript with no
       external libraries." />
