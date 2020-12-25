@@ -1,6 +1,5 @@
 import { rollup } from "rollup";
 import typescript from "@rollup/plugin-typescript";
-import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
 import css from "rollup-plugin-css-only";
@@ -49,16 +48,12 @@ export default {
     file: "build/bundle.js",
   },
   plugins: [
-    // smartAsset({ url: "copy" }),
-
     resolve({
       browser: true,
       dedupe: ["svelte"],
     }),
 
     typescript({ sourceMap: false }),
-
-    // commonjs(),
 
     svelteStaticHtml({
       component: "src/Index.svelte",
@@ -105,8 +100,6 @@ function svelteStaticHtml({ component, output, template }) {
             },
           }),
           css(),
-          // !production && serve(),
-          // !production && livereload("src"),
           production && terser(),
         ],
       });
@@ -137,12 +130,6 @@ function svelteStaticHtml({ component, output, template }) {
       ).process(htmlTemplate);
 
       await fs.outputFile(`${output}/index.html`, processedHtml.html);
-
-      // await fs.outputFile(`${output}/bundle.css`, styles.source);
-
-      // bundle.output.forEach((chunkOrAsset) =>
-      //   console.log(chunkOrAsset.fileName)
-      // );
     },
   };
 }

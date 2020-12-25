@@ -88,6 +88,7 @@
 
   main {
     line-height: 1.3;
+    margin: 0 2rem;
   }
   @media (min-width: 1140px) {
     main {
