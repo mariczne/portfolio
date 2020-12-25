@@ -1,13 +1,9 @@
 <script lang="ts">
-  // import { onMount } from "svelte";
   import Navigation from "./Navigation/Navigation.svelte";
   import Hero from "./Hero/Hero.svelte";
   import About from "./About/About.svelte";
   import Projects from "./Projects/Projects.svelte";
   import Contact from "./Contact/Contact.svelte";
-  // import mountHandler from "./mountHandler";
-
-  // onMount(mountHandler);
 </script>
 
 <slot>

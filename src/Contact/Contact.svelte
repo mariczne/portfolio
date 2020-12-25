@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Footer from "./Footer.svelte";
   import GithubIcon from "../icons/GithubIcon.svelte";
   import FacebookIcon from "../icons/FacebookIcon.svelte";
@@ -15,7 +15,7 @@
     </p>
     <div class="contact__links">
       <a href="mailto:mxaxxrzzcyyin@kwzzixeyyk.dev" id="mail-link">
-        <MailIcon />
+        <FacebookIcon />
       </a>
       <a href="https://m.me/marcin.kwiekk">
         <FacebookIcon />

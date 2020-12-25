@@ -1,4 +1,5 @@
 <script>
+  import Image from "svelte-image"
   import CodeIcon from "../icons/CodeIcon.svelte";
   import LinkIcon from "../icons/LinkIcon.svelte";
 
@@ -13,7 +14,7 @@
 <div class="projects__item">
   <div class="projects__item-imagebox">
     <a {href}>
-      <img src={imgSrc} alt={imgAlt || name} class="projects__item-image" />
+      <Image src={imgSrc} alt={imgAlt || name} class="projects__item-image" />
     </a>
   </div>
   <div class="projects__item-description">

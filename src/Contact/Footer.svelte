@@ -1,10 +1,12 @@
 <script>
   import YoutubeIcon from "../icons/YoutubeIcon.svelte";
+
+  let currentYear = new Date().getFullYear();
 </script>
 
 <footer class="footer">
   <div class="footer__logobox"><img src="img/logo.png" alt="Logo" /></div>
-  <div class="footer__copyright">&copy; 2019 Marcin Kwiek</div>
+  <div class="footer__copyright">&copy; 2019-{currentYear} Marcin Kwiek</div>
   <div class="footer__inspired-by">
     inspired by&NonBreakingSpace;
     <a
