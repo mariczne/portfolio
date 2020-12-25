@@ -1,7 +1,7 @@
 export default (function () {
   function onload() {
     // Navigation underline
-    const heroLineBlue = document.querySelector(".hero__line--blue");
+    const heroLineBlue = document.querySelector(".heroline:last-of-type");
     const navigationUnderlines = <HTMLElement>(
       document.querySelector(".underlines")
     );
@@ -17,7 +17,7 @@ export default (function () {
           ? "none"
           : "block";
       });
-    } 
+    }
 
     navigationUnderlinesObserver.observe(heroLineBlue);
 

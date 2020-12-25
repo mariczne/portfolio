@@ -1,5 +1,6 @@
 <script>
   import Section from "../components/Section.svelte";
+  import Item from "./Item.svelte";
   import Css3Icon from "../components/Icon/Css3Icon.svelte";
   import GitIcon from "../components/Icon/GitIcon.svelte";
 
@@ -20,69 +21,38 @@
     effect of my work gives me a lot of satisfaction.
   </p>
 
-  <h3 class="about__header--secondary">
-    Technologies that I have experience with:
-  </h3>
+  <h3>Technologies that I have experience with:</h3>
   <h4>On the front-end, I use:</h4>
-  <ul class="about__list">
-    <li>
-      <Html5Icon /><span>HTML</span>
-    </li>
-    <li>
-      <Css3Icon /><span>CSS (SASS)</span>
-    </li>
-    <li>
-      <TypeScriptIcon /><span>TypeScript/JavaScript</span>
-    </li>
-    <li>
-      <ReactIcon /><span>React</span>
-    </li>
+  <ul>
+    <Item Icon={Html5Icon}>HTML</Item>
+    <Item Icon={Css3Icon}>CSS (SASS)</Item>
+    <Item Icon={TypeScriptIcon}>TypeScript/JavaScript</Item>
+    <Item Icon={ReactIcon}>React</Item>
   </ul>
 
   <h4>On the back-end, I work with:</h4>
-  <ul class="about__list">
-    <li>
-      <NodejsIcon /><span>Node.js with Express</span>
-    </li>
-    <li>
-      <SqlIcon /><span>SQL or MongoDB</span>
-    </li>
+  <ul>
+    <Item Icon={NodejsIcon}>Node.js</Item>
+    <Item Icon={SqlIcon}>SQL or MongoDB</Item>
   </ul>
 
   <h4>I also use:</h4>
-  <ul class="about__list">
-    <li>
-      <GitIcon /><span>git</span>
-    </li>
-    <li>
-      <!-- <LinuxIcon /> -->
-      <span>Linux</span>
-    </li>
+  <ul>
+    <Item Icon={GitIcon}>git</Item>
+    <Item Icon={GitIcon}>Linux</Item>
   </ul>
 
   <p>I speak <strong>Polish</strong> and <strong>English</strong>.</p>
 </Section>
 
 <style>
-  .about__header--secondary {
+  h3 {
     margin: 2rem 0;
   }
-  .about__list {
-    margin: 1rem 0;
-    list-style: none;
-  }
-
   ul {
     display: flex;
     flex-direction: column;
-  }
-
-  ul li {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  ul li > span {
-    margin-left: 0.5em;
+    margin: 1rem 0;
+    list-style: none;
   }
 </style>

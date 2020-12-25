@@ -4,7 +4,7 @@
   let currentYear = new Date().getFullYear();
 </script>
 
-<footer class="footer">
+<footer>
   <div class="footer__logobox">
     <div class="footer__logo" />
   </div>
@@ -21,14 +21,14 @@
 </footer>
 
 <style>
-  .footer {
+  footer {
     text-align: center;
     font-size: 1.6rem;
   }
-  .footer__logobox img {
+  /* .footer__logobox img {
     padding-top: 1rem;
     max-width: 2rem;
-  }
+  } */
   .footer__copyright {
     padding: 1rem;
     color: #ddd;
