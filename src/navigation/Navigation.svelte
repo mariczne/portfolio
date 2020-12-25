@@ -1,7 +1,7 @@
 <script>
   import NavigationLink from "./NavigationLink.svelte";
   import NavigationUnderline from "./NavigationUnderline.svelte";
-  import Github from "../icons/GithubIcon.svelte";
+  import GithubIcon from "../icons/GithubIcon.svelte";
 </script>
 
 <nav class="navigation">
@@ -9,7 +9,7 @@
   <NavigationLink href="#projects">Projects</NavigationLink>
   <NavigationLink href="#contact">Contact</NavigationLink>
   <NavigationLink href="https://github.com/mariczne">
-    <Github />
+    <GithubIcon size={18} />
   </NavigationLink>
 
   <div class="navigation__underlines">

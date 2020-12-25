@@ -1,6 +1,10 @@
+<script>
+  export let size;
+</script>
+
 <svg
-  width="24"
-  height="24"
+  width={size}
+  height={size}
   stroke="none"
   fill="currentColor"
   xmlns:xlink="http://www.w3.org/1999/xlink"

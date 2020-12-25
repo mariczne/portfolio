@@ -1,19 +1,18 @@
-import svelte from "rollup-plugin-svelte";
+import { rollup } from "rollup";
+import typescript from "@rollup/plugin-typescript";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
+import svelte from "rollup-plugin-svelte";
+import css from "rollup-plugin-css-only";
 import livereload from "rollup-plugin-livereload";
 import { terser } from "rollup-plugin-terser";
 import sveltePreprocess from "svelte-preprocess";
-import css from "rollup-plugin-css-only";
-import smartAsset from "rollup-plugin-smart-asset";
 import vm from "vm";
 import fs from "fs-extra";
-import { rollup } from "rollup";
+import fg from "fast-glob";
 import posthtml from "posthtml";
 import beautify from "posthtml-beautify";
 import insertAt from "posthtml-insert-at";
-import typescript from "@rollup/plugin-typescript";
-import image from "svelte-image";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -46,7 +45,7 @@ export default {
   input: "src/main.ts",
   output: {
     format: "iife",
-    name: "main",
+    // name: "main",
     file: "build/bundle.js",
   },
   plugins: [
@@ -59,7 +58,7 @@ export default {
 
     typescript({ sourceMap: false }),
 
-    commonjs(),
+    // commonjs(),
 
     svelteStaticHtml({
       component: "src/Index.svelte",
@@ -71,6 +70,16 @@ export default {
     !production && livereload(),
 
     production && terser(),
+
+    {
+      name: "watch-external",
+      async buildStart() {
+        const files = await fg("src/**/*");
+        for (let file of files) {
+          this.addWatchFile(file);
+        }
+      },
+    },
   ],
   watch: {
     clearScreen: false,
@@ -89,7 +98,7 @@ function svelteStaticHtml({ component, output, template }) {
             dedupe: ["svelte"],
           }),
           svelte({
-            preprocess: [sveltePreprocess(), image()],
+            preprocess: [sveltePreprocess()],
             compilerOptions: {
               dev: !production,
               generate: "ssr",
@@ -109,9 +118,16 @@ function svelteStaticHtml({ component, output, template }) {
       const Component = vm.runInNewContext(entryChunk.code, { module });
       const { html } = Component.render();
       const htmlTemplate = await generateHtmlTemplate(template, html);
+      const styles = bundle.output.find(
+        (chunkOrAsset) => chunkOrAsset.fileName === "bundle.css"
+      );
       const processedHtml = await posthtml(
         [
-          template && insertAt({ selector: "body", prepend: html }),
+          insertAt({ selector: "body", prepend: html }),
+          insertAt({
+            selector: "head",
+            append: `<style>${styles.source}</style>`,
+          }),
           beautify({
             rules: {
               blankLines: false,
@@ -122,14 +138,11 @@ function svelteStaticHtml({ component, output, template }) {
 
       await fs.outputFile(`${output}/index.html`, processedHtml.html);
 
-      const styles = bundle.output.find(
-        (chunkOrAsset) => chunkOrAsset.fileName === "bundle.css"
-      );
-      await fs.outputFile(`${output}/bundle.css`, styles.source);
+      // await fs.outputFile(`${output}/bundle.css`, styles.source);
 
-      bundle.output.forEach((chunkOrAsset) =>
-        console.log(chunkOrAsset.fileName)
-      );
+      // bundle.output.forEach((chunkOrAsset) =>
+      //   console.log(chunkOrAsset.fileName)
+      // );
     },
   };
 }

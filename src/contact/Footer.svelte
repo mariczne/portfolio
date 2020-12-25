@@ -32,7 +32,7 @@
   }
   .footer__inspired-by {
     padding-bottom: 1rem;
-    color: #666;
+    color: #7d7d7d;
   }
 
   .footer__ytlink,

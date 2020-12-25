@@ -15,16 +15,16 @@
     </p>
     <div class="contact__links">
       <a href="mailto:mxaxxrzzcyyin@kwzzixeyyk.dev" id="mail-link">
-        <FacebookIcon />
+        <MailIcon size={72} />
       </a>
       <a href="https://m.me/marcin.kwiekk">
-        <FacebookIcon />
+        <FacebookIcon size={72} />
       </a>
       <a href="https://www.linkedin.com/in/marcin-kwiek/">
-        <LinkedinIcon />
+        <LinkedinIcon size={72} />
       </a>
       <a href="https://github.com/mariczne">
-        <GithubIcon />
+        <GithubIcon size={72} />
       </a>
     </div>
   </div>
