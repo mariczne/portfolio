@@ -5,16 +5,14 @@
 </script>
 
 <footer>
-  <div class="footer__logobox">
-    <div class="footer__logo" />
+  <div class="logobox">
+    <div class="logo" />
   </div>
-  <div class="footer__copyright">&copy; 2019-{currentYear} Marcin Kwiek</div>
-  <div class="footer__inspired-by">
-    inspired by&NonBreakingSpace;
-    <a
-      href="https://www.youtube.com/watch?v=e9DfSCk-6Ko"
-      class="footer__ytlink">
-      <YoutubeIcon size="16" />&NonBreakingSpace; blank vhs covers were kinda
+  <div class="copyright">&copy; 2019-{currentYear} Marcin Kwiek</div>
+  <div class="inspired-by">
+    inspired by
+    <a href="https://www.youtube.com/watch?v=e9DfSCk-6Ko" class="ytlink">
+      <span><YoutubeIcon size="1.6rem" /></span>blank vhs covers were kinda
       beautiful
     </a>
   </div>
@@ -29,18 +27,27 @@
     padding-top: 1rem;
     max-width: 2rem;
   } */
-  .footer__copyright {
+  .copyright {
     padding: 1rem;
     color: #ddd;
   }
-  .footer__inspired-by {
+  .inspired-by {
+    display: inline-flex;
     padding-bottom: 1rem;
     color: #7d7d7d;
   }
 
-  .footer__ytlink,
-  .footer__ytlink:link,
-  .footer__ytlink:visited {
+  .inspired-by span {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0.5em;
+  }
+
+  .ytlink,
+  .ytlink:link,
+  .ytlink:visited {
+    display: inline-flex;
+    align-items: center;
     color: #aaa;
     text-decoration: none;
   }

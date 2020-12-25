@@ -62,11 +62,7 @@ export default {
     }),
 
     !production && serve(),
-    !production && livereload(),
-
-    production && terser(),
-
-    {
+    !production && {
       name: "watch-external",
       async buildStart() {
         const files = await fg("src/**/*");
@@ -75,6 +71,9 @@ export default {
         }
       },
     },
+    !production && livereload(),
+    
+    production && terser(),
   ],
   watch: {
     clearScreen: false,

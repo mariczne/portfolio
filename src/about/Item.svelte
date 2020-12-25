@@ -3,7 +3,7 @@
 </script>
 
 <li>
-  <Icon />
+  <Icon size="2rem"/>
   <span><slot /></span>
 </li>
 
