@@ -2,17 +2,16 @@
   import CodeIcon from "../components/Icon//CodeIcon.svelte";
   import LinkIcon from "../components/Icon//LinkIcon.svelte";
 
-  export let href;
-  export let imgSrc;
-  export let imgAlt;
-  export let repoHref;
   export let name;
+  export let href;
+  export let repoHref;
+  export let imgSrc;
   export let description;
 </script>
 
 <div class="project">
   <div class="imagebox">
-    <a {href}> <img src={imgSrc} alt={imgAlt || name} /> </a>
+    <a {href}> <img src={imgSrc} alt={`${name} screenshot`} /> </a>
   </div>
   <div class="description">
     <header>
@@ -51,13 +50,13 @@
   .description p {
     font-size: 2rem;
   }
-  
+
   header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
   }
-  
+
   @media (max-width: 639px) {
     .project {
       flex-direction: column;
@@ -73,7 +72,7 @@
   .links {
     margin: 1rem 0 1rem 0.2rem;
   }
-  
+
   .link,
   .link:link,
   .link:visited {
@@ -107,7 +106,7 @@
     max-width: 100%;
     max-height: 100%;
   }
-  
+
   @media (min-width: 640px) {
     img {
       position: absolute;

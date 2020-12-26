@@ -1,12 +1,14 @@
 <script>
-  import YoutubeIcon from "../components/Icon//YoutubeIcon.svelte";
+  import YoutubeIcon from "../components/Icon/YoutubeIcon.svelte";
+  import KwiekdevIcon from "../components/Icon/KwiekdevIcon.svelte";
 
   let currentYear = new Date().getFullYear();
 </script>
 
 <footer>
   <div class="logobox">
-    <div class="logo" />
+    <KwiekdevIcon size="3.2rem" />
+    <!-- <div class="logo" /> -->
   </div>
   <div class="copyright">&copy; 2019-{currentYear} Marcin Kwiek</div>
   <div class="inspired-by">

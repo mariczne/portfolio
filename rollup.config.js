@@ -12,6 +12,7 @@ import fg from "fast-glob";
 import posthtml from "posthtml";
 import beautify from "posthtml-beautify";
 import insertAt from "posthtml-insert-at";
+import { minify } from "html-minifier";
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -44,7 +45,6 @@ export default {
   input: "src/main.ts",
   output: {
     format: "iife",
-    // name: "main",
     file: "build/bundle.js",
   },
   plugins: [
@@ -72,7 +72,7 @@ export default {
       },
     },
     !production && livereload(),
-    
+
     production && terser(),
   ],
   watch: {
@@ -99,7 +99,7 @@ function svelteStaticHtml({ component, output, template }) {
             },
           }),
           css(),
-          production && terser(),
+          // production && terser(),
         ],
       });
 
@@ -128,7 +128,21 @@ function svelteStaticHtml({ component, output, template }) {
         ].filter(Boolean)
       ).process(htmlTemplate);
 
-      await fs.outputFile(`${output}/index.html`, processedHtml.html);
+      const minifiedHtml = minify(processedHtml.html, {
+        // collapseInlineTagWhitespace: true,
+        collapseWhitespace: true,
+        keepClosingSlash: true,
+        caseSensitive: true,
+        ignoreCustomFragments: [
+          /<%[\s\S]*?%>/,
+          /<\?[\s\S]*?\?>/,
+          /\{#.+?\}/,
+          /\{:.+?\}/,
+          /\{\/.+?\}/,
+        ],
+      });
+
+      await fs.outputFile(`${output}/index.html`, minifiedHtml);
     },
   };
 }

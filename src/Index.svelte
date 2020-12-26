@@ -122,4 +122,16 @@
       transform: translateX(0);
     }
   }
+
+  /* .opacity-100 {
+    opacity: 100;
+  } */
+
+  .opacity-0 {
+    opacity: 0;
+  }
+
+  .hidden {
+    display: hidden;
+  }
 </style>
