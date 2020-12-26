@@ -3,20 +3,20 @@
 </script>
 
 <div class="hero">
-  <div class="hero__wrapper">
-    <div class="hero__name"><span>Marcin Kwiek</span></div>
-    <div class="hero__lines">
+  <div class="wrapper">
+    <div class="name"><span>Marcin Kwiek</span></div>
+    <div class="hero-lines">
       <HeroLine color="red" />
       <HeroLine color="green" />
       <HeroLine color="blue" />
     </div>
-    <div class="hero__title">
-      <span class="hero__title-line-top">
-        web
-        <span class="hero__title--small">front&centerdot;end</span>
+    <div class="title">
+      <span class="title-line-top">
+        web&nbsp;
+        <span class="small">front&centerdot;end</span>
       </span>
       <br />
-      <span class="hero__title-line-bottom">developer</span>
+      <span class="title-line-bottom">developer</span>
     </div>
   </div>
 </div>
@@ -31,7 +31,8 @@
     backface-visibility: hidden;
     user-select: none;
   }
-  .hero__wrapper {
+
+  .wrapper {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -41,58 +42,57 @@
     backface-visibility: hidden;
     overflow: hidden;
   }
-  .hero__name {
+
+  .name {
     position: relative;
     font-family: "Helvetica Neue Bold", "Liberation Sans", "Arial";
     font-size: 6.4rem;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+    animation: 1.6s slideFromRight 0.5s;
+    animation-fill-mode: backwards;
+    will-change: transform;
   }
-  .hero__title {
+
+  .hero-lines {
+    font-size: 0px;
+    overflow: hidden;
+  }
+
+  .title {
     font-family: "Helvetica Neue Bold", "Liberation Sans", "Arial";
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
     margin-right: 12.8rem;
   }
-  .hero__title-line-top {
+
+  .title-line-top {
     display: inline-block;
     position: relative;
     font-size: 6.4rem;
     color: var(--yellow);
     margin-bottom: -1rem;
-  }
-  .hero__title-line-bottom {
-    display: inline-block;
-    position: relative;
-    font-size: 5.8rem;
-  }
-  .hero__title--small {
-    font-size: 50%;
-  }
-  .hero__lines {
-    font-size: 0px;
-    overflow: hidden;
-  }
-
-  .hero__name {
-    animation: 1.6s slideFromRight 0.5s;
-    animation-fill-mode: backwards;
-    will-change: transform;
-  }
-  .hero__title-line-top {
     animation-duration: 1.8s;
     animation-name: slideFromRight;
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
     will-change: transform;
   }
-  .hero__title-line-bottom {
+
+  .title-line-bottom {
+    display: inline-block;
+    position: relative;
+    font-size: 5.8rem;
     animation-duration: 2s;
     animation-name: slideFromRight;
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
     will-change: transform;
+  }
+
+  .small {
+    font-size: 50%;
   }
 </style>

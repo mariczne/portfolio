@@ -27,7 +27,7 @@
     width: 100%;
     position: fixed;
     z-index: 2;
-    animation: opacity 1s 2.5s;
+    animation: toFullOpacity 1s 2.5s;
     animation-fill-mode: backwards;
   }
 

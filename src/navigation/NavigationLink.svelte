@@ -17,6 +17,7 @@
     margin: 1rem 2rem;
     vertical-align: middle;
   }
+  
   a:hover {
     color: var(--yellow);
   }

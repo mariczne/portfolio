@@ -36,7 +36,7 @@
   html {
     box-sizing: border-box;
     font-size: 62.5%;
-    background-color: #121316;
+    background-color: var(--black);
     font-family: "Arimo", "Liberation Sans", "Arial";
     scroll-behavior: smooth;
   }
@@ -69,33 +69,34 @@
     overflow-x: hidden;
   }
 
+  main {
+    line-height: 1.3;
+    margin: 0 2.4rem;
+  }
+
+  @media (min-width: 1140px) {
+    main {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+  }
+/* 
   * {
     scrollbar-width: thin;
-    scrollbar-color: #1f2125 #121316;
+    scrollbar-color: var(--grey) var(--black);
   }
 
   *::-webkit-scrollbar {
     width: 12px;
   }
   *::-webkit-scrollbar-track {
-    background: #121316;
+    background: var(--black);
   }
   *::-webkit-scrollbar-thumb {
-    background-color: #1f2125;
+    background-color: var(--grey);
     border-radius: 20px;
-    border: 3px solid #121316;
-  }
-
-  main {
-    line-height: 1.3;
-    margin: 0 2rem;
-  }
-  @media (min-width: 1140px) {
-    main {
-      max-width: 114rem;
-      margin: 0 auto;
-    }
-  }
+    border: 3px solid var(--black);
+  } */
 
   @keyframes slideFromRight {
     0% {
@@ -106,14 +107,6 @@
     }
   }
 
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 100;
-    }
-  }
   @keyframes slideFromLeft {
     0% {
       transform: translateX(-110vw);
@@ -123,15 +116,12 @@
     }
   }
 
-  /* .opacity-100 {
-    opacity: 100;
-  } */
-
-  .opacity-0 {
-    opacity: 0;
-  }
-
-  .hidden {
-    display: hidden;
+  @keyframes toFullOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
   }
 </style>

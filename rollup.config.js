@@ -10,7 +10,6 @@ import vm from "vm";
 import fs from "fs-extra";
 import fg from "fast-glob";
 import posthtml from "posthtml";
-import beautify from "posthtml-beautify";
 import insertAt from "posthtml-insert-at";
 import { minify } from "html-minifier";
 
@@ -61,6 +60,7 @@ export default {
       template: "src/template.html",
     }),
 
+    terser(),
     !production && serve(),
     !production && {
       name: "watch-external",
@@ -72,8 +72,6 @@ export default {
       },
     },
     !production && livereload(),
-
-    production && terser(),
   ],
   watch: {
     clearScreen: false,
@@ -99,7 +97,6 @@ function svelteStaticHtml({ component, output, template }) {
             },
           }),
           css(),
-          // production && terser(),
         ],
       });
 
@@ -120,26 +117,14 @@ function svelteStaticHtml({ component, output, template }) {
             selector: "head",
             append: `<style>${styles.source}</style>`,
           }),
-          beautify({
-            rules: {
-              blankLines: false,
-            },
-          }),
         ].filter(Boolean)
       ).process(htmlTemplate);
-
+      
       const minifiedHtml = minify(processedHtml.html, {
-        // collapseInlineTagWhitespace: true,
+        collapseInlineTagWhitespace: true,
         collapseWhitespace: true,
         keepClosingSlash: true,
         caseSensitive: true,
-        ignoreCustomFragments: [
-          /<%[\s\S]*?%>/,
-          /<\?[\s\S]*?\?>/,
-          /\{#.+?\}/,
-          /\{:.+?\}/,
-          /\{\/.+?\}/,
-        ],
       });
 
       await fs.outputFile(`${output}/index.html`, minifiedHtml);

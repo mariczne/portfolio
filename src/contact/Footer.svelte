@@ -25,14 +25,17 @@
     text-align: center;
     font-size: 1.6rem;
   }
+  
   /* .footer__logobox img {
     padding-top: 1rem;
     max-width: 2rem;
   } */
+
   .copyright {
     padding: 1rem;
     color: #ddd;
   }
+
   .inspired-by {
     display: inline-flex;
     padding-bottom: 1rem;

@@ -10,9 +10,9 @@
 </script>
 
 <div class="project">
-  <div class="imagebox">
-    <a {href}> <img src={imgSrc} alt={`${name} screenshot`} /> </a>
-  </div>
+  <a class="imagebox" {href}>
+    <img src={`${imgSrc}?nf_resize=fit&w=660`} alt={`${name} screenshot`} />
+  </a>
   <div class="description">
     <header>
       <h3>{name}</h3>
@@ -40,6 +40,7 @@
     padding: 4rem;
     margin: 4rem 0;
   }
+
   .description {
     flex-basis: 70%;
     flex-shrink: 1;
@@ -47,6 +48,7 @@
     flex-direction: column;
     justify-content: space-between;
   }
+
   .description p {
     font-size: 2rem;
   }
@@ -57,7 +59,7 @@
     justify-content: flex-start;
   }
 
-  @media (max-width: 639px) {
+  @media (max-width: 767px) {
     .project {
       flex-direction: column;
     }
@@ -91,14 +93,15 @@
   .imagebox {
     position: relative;
     margin-right: 2rem;
-    flex-basis: 30%;
     flex-shrink: 0;
+    width: 320px;
   }
 
-  @media (max-width: 639px) {
+  @media (max-width: 767px) {
     .imagebox {
       margin-right: 0;
       margin-bottom: 2rem;
+      width: auto;
     }
   }
 
@@ -107,7 +110,7 @@
     max-height: 100%;
   }
 
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     img {
       position: absolute;
       top: 50%;
