@@ -14,14 +14,17 @@
     animation-fill-mode: backwards;
     will-change: transform;
   }
+
   .red {
     background-color: var(--red);
     animation-duration: 0.4s;
   }
+
   .green {
     background-color: var(--green);
     animation-duration: 0.6s;
   }
+
   .blue {
     background-color: var(--blue);
     animation-duration: 0.8s;

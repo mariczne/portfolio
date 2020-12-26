@@ -4,9 +4,7 @@ export default (function () {
     const rootMargin = "-4.5% 0% 0% 0%";
 
     // Navigation underline
-    const heroLineBlue = document.querySelector<HTMLDivElement>(
-      ".heroline:last-of-type"
-    );
+    const heroLineBlue = document.querySelector(".hero-line:last-of-type");
     const navigationUnderlines = document.querySelector<HTMLDivElement>(
       ".underlines"
     );
@@ -55,16 +53,16 @@ export default (function () {
 
     // Spambot prevention
     function deobfusc(input: string) {
-      return input.replace(/x|y|z/g, "");
+      return input.slice(0, input.indexOf("?")).replace(/x|y|z/g, "");
     }
 
-    const mail = <HTMLAnchorElement>document.getElementById("mail-link");
+    const mail = document.getElementById("mail-link");
 
     const mailObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           const target = entry.target as HTMLAnchorElement;
-          if (entry.isIntersecting) target.href = deobfusc(mail.href);
+          if (entry.isIntersecting) target.href = deobfusc(target.href);
           mailObserver.unobserve(target);
         });
       },

@@ -3,9 +3,13 @@
   import Footer from "./Footer.svelte";
   import GithubIcon from "../components/Icon/GithubIcon.svelte";
   // import FacebookIcon from "../components/Icon/FacebookIcon.svelte";
-  import MessengerIcon from "../components/Icon/MessengerIcon.svelte"
+  import MessengerIcon from "../components/Icon/MessengerIcon.svelte";
   import LinkedinIcon from "../components/Icon/LinkedinIcon.svelte";
   import MailIcon from "../components/Icon/MailIcon.svelte";
+
+  const fallbackDecodeMessage = encodeURIComponent(
+    "If you're seeing this message, something went wrong and spambot prevention didn't work properly. Please remove all x, y and z from the e-mail address manually."
+  );
 </script>
 
 <Section id="contact" headerText="Contact">
@@ -15,7 +19,9 @@
       have a question, feel free to contact me using one of the following:
     </p>
     <div class="links">
-      <a href="mailto:mxaxxrzzcyyin@kwzzixeyyk.dev" id="mail-link">
+      <a
+        href={`mailto:mxaxxrzzcyyin@kwzzixeyyk.dev?body=${fallbackDecodeMessage}`}
+        id="mail-link">
         <MailIcon size="7.2rem" />
       </a>
       <a href="https://m.me/marcin.kwiekk">

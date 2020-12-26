@@ -14,7 +14,7 @@
     font-weight: 500;
     color: var(--white);
     padding-top: 8rem;
-    transition: opacity 1s;
+    transition: toFullOpacity 1s;
     margin-bottom: 10rem;
   }
 

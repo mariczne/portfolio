@@ -2,10 +2,10 @@
   export let color;
 </script>
 
-<div class="heroline {color}" />
+<div class="hero-line {color}" />
 
 <style>
-  .heroline {
+  .hero-line {
     display: block;
     position: relative;
     height: 1.5rem;
@@ -15,14 +15,17 @@
     animation-fill-mode: backwards;
     will-change: transform;
   }
+
   .red {
     background-color: var(--red);
     animation-duration: 0.8s;
   }
+
   .green {
     background-color: var(--green);
     animation-duration: 1s;
   }
+
   .blue {
     background-color: var(--blue);
     animation-duration: 1.2s;
