@@ -5,7 +5,7 @@
   import GitIcon from "../components/Icon/GitIcon.svelte";
 
   import Html5Icon from "../components/Icon/Html5Icon.svelte";
-  // import LinuxIcon from "../components/Icon/LinuxIcon.svelte";
+  import LinuxIcon from "../components/Icon/LinuxIcon.svelte";
   import NodejsIcon from "../components/Icon/NodejsIcon.svelte";
   import ReactIcon from "../components/Icon/ReactIcon.svelte";
   import SqlIcon from "../components/Icon/SqlIcon.svelte";
@@ -39,7 +39,7 @@
   <h4>I also use:</h4>
   <ul>
     <Item Icon={GitIcon}>git</Item>
-    <Item Icon={GitIcon}>Linux</Item>
+    <Item Icon={LinuxIcon}>Linux</Item>
   </ul>
 
   <p>I speak&nbsp;<strong>Polish</strong>&nbsp;and&nbsp;<strong>English</strong>.</p>

@@ -80,7 +80,7 @@
       margin: 0 auto;
     }
   }
-/* 
+
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--grey) var(--black);
@@ -96,7 +96,7 @@
     background-color: var(--grey);
     border-radius: 20px;
     border: 3px solid var(--black);
-  } */
+  }
 
   @keyframes slideFromRight {
     0% {
