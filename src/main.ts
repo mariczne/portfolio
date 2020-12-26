@@ -52,8 +52,15 @@ export default (function () {
     });
 
     // Spambot prevention
+    // function deobfusc(input: string) {
+    //   return input.slice(0, input.indexOf("?")).replace(/x|y|z/g, "");
+    // }
     function deobfusc(input: string) {
-      return input.slice(0, input.indexOf("?")).replace(/x|y|z/g, "");
+      console.log(input);
+      return input
+        .slice(0, input.indexOf("?"))
+        .replace("%F0%9F%90%92", "@")
+        .replace("%F0%9F%8D%85", ".");
     }
 
     const mail = document.getElementById("mail-link");
