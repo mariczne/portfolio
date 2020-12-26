@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import NavigationLink from "./NavigationLink.svelte";
   import NavigationUnderline from "./NavigationUnderline.svelte";
   import GithubIcon from "../components/Icon//GithubIcon.svelte";
@@ -9,7 +9,7 @@
   <NavigationLink href="#projects">Projects</NavigationLink>
   <NavigationLink href="#contact">Contact</NavigationLink>
   <NavigationLink href="https://github.com/mariczne">
-    <GithubIcon size={18} />
+    <GithubIcon size="18" />
   </NavigationLink>
 
   <div class="underlines">

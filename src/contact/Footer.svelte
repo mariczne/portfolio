@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import YoutubeIcon from "../components/Icon/YoutubeIcon.svelte";
   import KwiekdevIcon from "../components/Icon/KwiekdevIcon.svelte";
 

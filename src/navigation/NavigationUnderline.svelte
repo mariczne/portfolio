@@ -1,5 +1,5 @@
-<script>
-  export let color;
+<script lang="ts">
+  export let color: string;
 </script>
 
 <div class="underline {color}" />
@@ -7,7 +7,6 @@
 <style>
   .underline {
     display: inline-block;
-    position: relative;
     height: 1px;
     width: 100%;
     animation-name: slideFromLeft;

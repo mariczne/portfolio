@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Section from "../components/Section.svelte";
   import Item from "./Item.svelte";
   import Css3Icon from "../components/Icon/Css3Icon.svelte";

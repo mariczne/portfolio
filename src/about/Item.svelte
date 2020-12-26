@@ -1,9 +1,11 @@
-<script>
-  export let Icon;
+<script lang="ts">
+  // import type { SvelteComponentTyped } from "svelte";
+
+  export let Icon: any;
 </script>
 
 <li>
-  <Icon size="2rem"/>
+  <Icon size="2rem" />
   <span><slot /></span>
 </li>
 
