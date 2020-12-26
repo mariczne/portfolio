@@ -11,7 +11,7 @@
 
 <div class="project">
   <a class="imagebox" {href}>
-    <img src={`${imgSrc}?nf_resize=fit&w=660`} alt={`${name} screenshot`} />
+    <img src={imgSrc} loading="lazy" alt={`${name} screenshot`} />
   </a>
   <div class="description">
     <header>
