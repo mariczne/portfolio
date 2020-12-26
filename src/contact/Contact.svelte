@@ -10,7 +10,6 @@
   const fallbackDecodeMessage = encodeURIComponent(
     `If you're seeing this message, something went wrong and spambot prevention didn't work properly. Please replace appropriate characters in the e-mail address manually.`
   );
-  // <!-- href={`mailto:mxaxxrzzcyyin@kwzzixeyyk.dev?body=${fallbackDecodeMessage}`} -->
 </script>
 
 <Section id="contact" headerText="Contact">

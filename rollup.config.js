@@ -44,6 +44,7 @@ export default {
   input: "src/main.ts",
   output: {
     format: "iife",
+    name: "main",
     file: "build/bundle.js",
   },
   plugins: [
@@ -100,7 +101,7 @@ function svelteStaticHtml({ component, output, template }) {
         ],
       });
 
-      const bundle = await generate({ format: "cjs" });
+      const bundle = await generate({ format: "iife" });
       const entryChunk = bundle.output.find(
         (chunkOrAsset) => chunkOrAsset.isEntry
       );
@@ -119,7 +120,7 @@ function svelteStaticHtml({ component, output, template }) {
           }),
         ].filter(Boolean)
       ).process(htmlTemplate);
-      
+
       const minifiedHtml = minify(processedHtml.html, {
         collapseInlineTagWhitespace: true,
         collapseWhitespace: true,

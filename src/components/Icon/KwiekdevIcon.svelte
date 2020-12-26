@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let size = "100%";
 </script>
 
@@ -7,10 +7,7 @@
   height={size}
   version="1.0"
   viewBox="0 0 3e3 3e3"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:dc="http://purl.org/dc/elements/1.1/"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  xmlns="http://www.w3.org/2000/svg">
   <defs>
     <clipPath id="a">
       <g fill="#121316">

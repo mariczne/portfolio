@@ -1,6 +1,6 @@
-<script>
-  export let id;
-  export let headerText;
+<script lang="ts">
+  export let id: string;
+  export let headerText: string;
 </script>
 
 <section {id}>
@@ -11,7 +11,6 @@
 <style>
   section {
     font-size: 2.4rem;
-    font-weight: 500;
     color: var(--white);
     padding-top: 8rem;
     transition: toFullOpacity 1s;

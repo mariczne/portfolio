@@ -1,12 +1,12 @@
-<script>
+<script lang="ts">
   import CodeIcon from "../components/Icon//CodeIcon.svelte";
   import LinkIcon from "../components/Icon//LinkIcon.svelte";
 
-  export let name;
-  export let href;
-  export let repoHref;
-  export let imgSrc;
-  export let description;
+  export let name: string;
+  export let href: string;
+  export let repoHref: string;
+  export let imgSrc: string;
+  export let description: string;
 </script>
 
 <div class="project">
@@ -18,11 +18,11 @@
       <h3>{name}</h3>
       <span class="links">
         <a {href} class="link">
-          <LinkIcon size={32} />
+          <LinkIcon size="32" />
         </a>
         {#if repoHref}
           <a href={repoHref} class="link">
-            <CodeIcon size={32} />
+            <CodeIcon size="32" />
           </a>
         {/if}
       </span>

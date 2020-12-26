@@ -52,11 +52,7 @@ export default (function () {
     });
 
     // Spambot prevention
-    // function deobfusc(input: string) {
-    //   return input.slice(0, input.indexOf("?")).replace(/x|y|z/g, "");
-    // }
     function deobfusc(input: string) {
-      console.log(input);
       return input
         .slice(0, input.indexOf("?"))
         .replace("%F0%9F%90%92", "@")
@@ -69,11 +65,13 @@ export default (function () {
       (entries) => {
         entries.forEach((entry) => {
           const target = entry.target as HTMLAnchorElement;
-          if (entry.isIntersecting) target.href = deobfusc(target.href);
-          mailObserver.unobserve(target);
+          if (entry.isIntersecting) {
+            target.href = deobfusc(target.href);
+            mailObserver.unobserve(target);
+          }
         });
       },
-      { root: null, rootMargin, threshold: [0, 1] }
+      { rootMargin, threshold: [0, 1] }
     );
 
     mailObserver.observe(mail);

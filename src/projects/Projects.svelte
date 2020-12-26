@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Section from "../components/Section.svelte";
   import Project from "./Project.svelte";
 </script>
@@ -8,7 +8,6 @@
     name="EQTHERM.pl"
     href="https://www.eqtherm.pl"
     imgSrc="static/eqtherm.png"
-    imgAlt="eqtherm"
     description="Commercial project made using Gatsby.js; a modern website for a
       company that will allow easy contact and show the company's line of
       products, with special emphasis on speed and ease of use." />

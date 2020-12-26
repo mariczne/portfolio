@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import HeroLine from "./HeroLine.svelte";
 </script>
 
@@ -11,12 +11,12 @@
       <HeroLine color="blue" />
     </div>
     <div class="title">
-      <span class="title-line-top">
+      <span class="title-line title-line-top">
         web&nbsp;
         <span class="small">front&centerdot;end</span>
       </span>
       <br />
-      <span class="title-line-bottom">developer</span>
+      <span class="title-line title-line-bottom">developer</span>
     </div>
   </div>
 </div>
@@ -27,6 +27,8 @@
     height: 100vh;
     width: 100vw;
     color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
     overflow-x: hidden;
     backface-visibility: hidden;
     user-select: none;
@@ -44,11 +46,7 @@
   }
 
   .name {
-    position: relative;
-    font-family: "Helvetica Neue Bold", "Liberation Sans", "Arial";
     font-size: 6.4rem;
-    font-weight: 700;
-    text-transform: uppercase;
     text-align: center;
     animation: 1.6s slideFromRight 0.5s;
     animation-fill-mode: backwards;
@@ -61,35 +59,29 @@
   }
 
   .title {
-    font-family: "Helvetica Neue Bold", "Liberation Sans", "Arial";
-    font-weight: 700;
-    text-transform: uppercase;
     text-align: center;
-    margin-right: 12.8rem;
+    /* margin-right: 12.8rem; */
+    transform: translateX(-6rem);
+  }
+
+  .title-line {
+    display: inline-block;
+    animation-name: slideFromRight;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+    will-change: transform;
   }
 
   .title-line-top {
-    display: inline-block;
-    position: relative;
     font-size: 6.4rem;
     color: var(--yellow);
     margin-bottom: -1rem;
     animation-duration: 1.8s;
-    animation-name: slideFromRight;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-    will-change: transform;
   }
 
   .title-line-bottom {
-    display: inline-block;
-    position: relative;
     font-size: 5.8rem;
     animation-duration: 2s;
-    animation-name: slideFromRight;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-    will-change: transform;
   }
 
   .small {

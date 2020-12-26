@@ -1,5 +1,5 @@
-<script>
-  export let color;
+<script lang="ts">
+  export let color: string;
 </script>
 
 <div class="hero-line {color}" />
@@ -7,7 +7,6 @@
 <style>
   .hero-line {
     display: block;
-    position: relative;
     height: 1.5rem;
     width: 100%;
     animation-name: slideFromRight;
