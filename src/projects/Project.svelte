@@ -30,11 +30,11 @@
       <h3>{name}</h3>
       <span class="links">
         <a {href} class="link">
-          <LinkIcon size="32" />
+          <LinkIcon size="32" title={`See ${name} live`} />
         </a>
         {#if repoHref}
           <a href={repoHref} class="link">
-            <CodeIcon size="32" />
+            <CodeIcon size="32" title={`Visit ${name} code repository`} />
           </a>
         {/if}
       </span>
@@ -92,6 +92,7 @@
   .link:visited {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     min-width: 48px;
     min-height: 48px;
     color: inherit;
