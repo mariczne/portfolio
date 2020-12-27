@@ -13,7 +13,7 @@
     font-size: 2.4rem;
     color: var(--white);
     padding-top: 8rem;
-    transition: toFullOpacity 1s;
+    transition: opacity 1s;
     margin-bottom: 10rem;
   }
 
