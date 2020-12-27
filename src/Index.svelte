@@ -118,7 +118,8 @@
 
   @keyframes toFullOpacity {
     0% {
-      opacity: 0;
+      /** Hack for Lighthouse */
+      opacity: 0.001;
     }
     100% {
       opacity: 100;

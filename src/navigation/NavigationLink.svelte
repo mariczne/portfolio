@@ -15,7 +15,6 @@
     text-decoration: none;
     text-transform: uppercase;
     margin: 1rem 2rem;
-    vertical-align: middle;
   }
 
   a:hover {
