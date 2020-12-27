@@ -3,7 +3,6 @@
   import Item from "./Item.svelte";
   import Css3Icon from "../components/Icon/Css3Icon.svelte";
   import GitIcon from "../components/Icon/GitIcon.svelte";
-
   import Html5Icon from "../components/Icon/Html5Icon.svelte";
   import LinuxIcon from "../components/Icon/LinuxIcon.svelte";
   import NodejsIcon from "../components/Icon/NodejsIcon.svelte";

@@ -3,10 +3,11 @@
   "version": "0.2.0",
   "description": "Personal webpage",
   "scripts": {
-    "build": "rm -rf build && rollup -c && cp -r static build",
-    "dev": "rm -rf build && mkdir build && cp -r static build/ && rollup -c -w",
+    "build": "rm -rf build && rollup -c && cp -r static build && ./generate-images.sh",
+    "dev": "cp -r static build/ && rollup -c -w",
     "start": "sirv build --host",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "genimg": "./generate-images"
   },
   "author": "Marcin Kwiek",
   "license": "ISC",

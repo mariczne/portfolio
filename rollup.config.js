@@ -50,7 +50,6 @@ export default {
   plugins: [
     resolve({
       browser: true,
-      dedupe: ["svelte"],
     }),
 
     typescript({ sourceMap: false }),
@@ -62,7 +61,9 @@ export default {
     }),
 
     terser(),
+
     !production && serve(),
+
     !production && {
       name: "watch-external",
       async buildStart() {
@@ -72,6 +73,7 @@ export default {
         }
       },
     },
+    
     !production && livereload(),
   ],
   watch: {

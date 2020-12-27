@@ -1,7 +1,8 @@
 <script lang="ts">
-  // import type { SvelteComponentTyped } from "svelte";
+  import type { IconType } from "../components/Icon/Icon";
+  import KwiekdevIcon from "../components/Icon/KwiekdevIcon.svelte";
 
-  export let Icon: any;
+  export let Icon: typeof IconType = KwiekdevIcon;
 </script>
 
 <li>

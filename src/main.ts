@@ -53,10 +53,12 @@ export default (function () {
 
     // Spambot prevention
     function deobfusc(input: string) {
+      const monkey = "%F0%9F%90%92";
+      const tomato = "%F0%9F%8D%85";
       return input
         .slice(0, input.indexOf("?"))
-        .replace("%F0%9F%90%92", "@")
-        .replace("%F0%9F%8D%85", ".");
+        .replace(monkey, "@")
+        .replace(tomato, ".");
     }
 
     const mail = document.getElementById("mail-link");

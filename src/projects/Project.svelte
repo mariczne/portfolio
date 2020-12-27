@@ -1,17 +1,29 @@
 <script lang="ts">
-  import CodeIcon from "../components/Icon//CodeIcon.svelte";
-  import LinkIcon from "../components/Icon//LinkIcon.svelte";
+  import CodeIcon from "../components/Icon/CodeIcon.svelte";
+  import LinkIcon from "../components/Icon/LinkIcon.svelte";
 
+  export let key: string;
   export let name: string;
   export let href: string;
   export let repoHref: string;
-  export let imgSrc: string;
   export let description: string;
 </script>
 
 <div class="project">
   <a class="imagebox" {href}>
-    <img src={imgSrc} loading="lazy" alt={`${name} screenshot`} />
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset={`static/images/${key}-736.webp`} />
+      <source
+        media="(min-width: 768px)"
+        srcset={`static/images/${key}-320.webp`} />
+      <source srcset={`static/images/${key}-736.png`} />
+      <img
+        src={`static/images/${key}-736.png`}
+        loading="lazy"
+        alt={`${name} screenshot`} />
+    </picture>
   </a>
   <div class="description">
     <header>
