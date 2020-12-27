@@ -75,6 +75,8 @@
   .title-line-top {
     font-size: 6.4rem;
     color: var(--yellow);
+    /* Background color hack necessary until Lighthouse fixes its shit */
+    background-color: var(--black);
     margin-bottom: -1rem;
     animation-duration: 1.8s;
   }

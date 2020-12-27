@@ -9,7 +9,7 @@
   <NavigationLink href="#projects">Projects</NavigationLink>
   <NavigationLink href="#contact">Contact</NavigationLink>
   <NavigationLink href="https://github.com/mariczne">
-    <GithubIcon size="18" />
+    <GithubIcon size="18" title="See my GitHub profile" />
   </NavigationLink>
 
   <div class="underlines">

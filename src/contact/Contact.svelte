@@ -21,16 +21,16 @@
       <a
         href={`mailto:marcin🐒kwiek🍅dev?body=${fallbackDecodeMessage}`}
         id="mail-link">
-        <MailIcon size="7.2rem" />
+        <MailIcon size="7.2rem" title="Write me an e-mail" />
       </a>
       <a href="https://m.me/marcin.kwiekk">
-        <MessengerIcon size="7.2rem" />
+        <MessengerIcon size="7.2rem" title="Talk to me on Messenger" />
       </a>
       <a href="https://www.linkedin.com/in/marcin-kwiek/">
-        <LinkedinIcon size="7.2rem" />
+        <LinkedinIcon size="7.2rem" title="Visit my LinkedIn profile" />
       </a>
       <a href="https://github.com/mariczne">
-        <GithubIcon size="7.2rem" />
+        <GithubIcon size="7.2rem" title="Go to my GitHub profile" />
       </a>
     </div>
   </div>
