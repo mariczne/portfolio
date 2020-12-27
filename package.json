@@ -4,7 +4,7 @@
   "description": "Personal webpage",
   "scripts": {
     "build": "rm -rf build && rollup -c && cp -r static build && ./generate-images.sh",
-    "dev": "cp -r static build/ && rollup -c -w",
+    "dev": "npm run build && rollup -c -w",
     "start": "sirv build --host",
     "validate": "svelte-check",
     "genimg": "./generate-images"

@@ -37,7 +37,7 @@
     box-sizing: border-box;
     font-size: 62.5%;
     background-color: var(--black);
-    font-family: "Arimo", "Liberation Sans", "Arial";
+    font-family: "Sans", "Arimo";
     scroll-behavior: smooth;
   }
 
