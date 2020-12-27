@@ -2,7 +2,7 @@
   export let href: string;
 </script>
 
-<a {href} ><slot /></a>
+<a {href}><slot /></a>
 
 <style>
   a,
@@ -17,7 +17,7 @@
     margin: 1rem 2rem;
     vertical-align: middle;
   }
-  
+
   a:hover {
     color: var(--yellow);
   }

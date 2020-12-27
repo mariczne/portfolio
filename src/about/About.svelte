@@ -13,8 +13,8 @@
 
 <Section id="about" headerText="About me">
   <p>
-    Hi, my name is&nbsp;<strong>Marcin</strong>. I primarily build user interfaces, but I also work
-    with server-side technologies.<br />
+    Hi, my name is&nbsp;<strong>Marcin</strong>. I primarily build user
+    interfaces, but I also work with server-side technologies.<br />
     My journey with web development began in mid-2018 and I've been learning
     something new every day since. I&nbsp;enjoy solving problems and seeing the
     effect of my work gives me a lot of satisfaction.
@@ -41,7 +41,9 @@
     <Item Icon={LinuxIcon}>Linux</Item>
   </ul>
 
-  <p>I speak&nbsp;<strong>Polish</strong>&nbsp;and&nbsp;<strong>English</strong>.</p>
+  <p>
+    I speak&nbsp;<strong>Polish</strong>&nbsp;and&nbsp;<strong>English</strong>.
+  </p>
 </Section>
 
 <style>
