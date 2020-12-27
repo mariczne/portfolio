@@ -1,7 +1,7 @@
 <script lang="ts">
   import NavigationLink from "./NavigationLink.svelte";
   import NavigationUnderline from "./NavigationUnderline.svelte";
-  import GithubIcon from "../components/Icon//GithubIcon.svelte";
+  import GithubIcon from "../components/Icon/GithubIcon.svelte";
 </script>
 
 <nav>

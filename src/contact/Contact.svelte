@@ -2,7 +2,6 @@
   import Section from "../components/Section.svelte";
   import Footer from "./Footer.svelte";
   import GithubIcon from "../components/Icon/GithubIcon.svelte";
-  // import FacebookIcon from "../components/Icon/FacebookIcon.svelte";
   import MessengerIcon from "../components/Icon/MessengerIcon.svelte";
   import LinkedinIcon from "../components/Icon/LinkedinIcon.svelte";
   import MailIcon from "../components/Icon/MailIcon.svelte";

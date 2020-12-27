@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let color: string;
+  export let color: "red" | "green" | "blue";
 </script>
 
 <div class="hero-line {color}" />
