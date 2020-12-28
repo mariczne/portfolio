@@ -1,6 +1,6 @@
 <script lang="ts">
   export let size = "100%";
-  export let title;
+  export let title: string;
 </script>
 
 <svg
