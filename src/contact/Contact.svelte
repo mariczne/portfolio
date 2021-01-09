@@ -1,10 +1,7 @@
 <script lang="ts">
   import Section from "../components/Section.svelte";
   import Footer from "./Footer.svelte";
-  import GithubIcon from "../components/Icon/GithubIcon.svelte";
-  import MessengerIcon from "../components/Icon/MessengerIcon.svelte";
-  import LinkedinIcon from "../components/Icon/LinkedinIcon.svelte";
-  import MailIcon from "../components/Icon/MailIcon.svelte";
+  import Icon from "../components/Icon/Icon.svelte";
 
   const fallbackDecodeMessage = encodeURIComponent(
     `If you're seeing this message, something went wrong and spambot prevention didn't work properly. Please replace appropriate characters in the e-mail address manually.`
@@ -21,16 +18,16 @@
       <a
         href={`mailto:marcin🐒kwiek🍅dev?body=${fallbackDecodeMessage}`}
         id="mail-link">
-        <MailIcon size="7.2rem" title="Write me an e-mail" />
+        <Icon name="mail" size="7.2rem" title="Write me an e-mail" />
       </a>
       <a href="https://m.me/marcin.kwiekk">
-        <MessengerIcon size="7.2rem" title="Talk to me on Messenger" />
+        <Icon name="messenger" size="7.2rem" title="Talk to me on Messenger" />
       </a>
       <a href="https://www.linkedin.com/in/marcin-kwiek/">
-        <LinkedinIcon size="7.2rem" title="Visit my LinkedIn profile" />
+        <Icon name="linkedin" size="7.2rem" title="Visit my LinkedIn profile" />
       </a>
       <a href="https://github.com/mariczne">
-        <GithubIcon size="7.2rem" title="Go to my GitHub profile" />
+        <Icon name="github" size="7.2rem" title="Go to my GitHub profile" />
       </a>
     </div>
   </div>

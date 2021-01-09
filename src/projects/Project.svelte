@@ -1,11 +1,10 @@
 <script lang="ts">
-  import CodeIcon from "../components/Icon/CodeIcon.svelte";
-  import LinkIcon from "../components/Icon/LinkIcon.svelte";
+  import Icon from "../components/Icon/Icon.svelte";
 
   export let key: string;
   export let name: string;
   export let href: string;
-  export let repoHref: string;
+  export let repoHref: string = "";
   export let description: string;
 </script>
 
@@ -30,11 +29,11 @@
       <h3>{name}</h3>
       <span class="links">
         <a {href} class="link">
-          <LinkIcon size="32" title={`See ${name} live`} />
+          <Icon name="link" size="32" title={`See ${name} live`} />
         </a>
         {#if repoHref}
           <a href={repoHref} class="link">
-            <CodeIcon size="32" title={`Visit ${name} code repository`} />
+            <Icon name="code" size="32" title={`Visit ${name} code repository`} />
           </a>
         {/if}
       </span>

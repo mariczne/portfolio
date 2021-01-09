@@ -1,0 +1,8 @@
+<svg fill="currentColor" viewBox="0 0 32 32">
+  <path fill="#1572b6" d="M6 27L4 2h24l-2 25-10 3-10-3z" />
+  <path fill="#33a9dc" d="M16 28l8-2 2-22H16v24z" />
+  <path
+    fill="#121316"
+    d="M16 13h4v-3h-4V7h8v1l-1 8h-7v-3zM16 21l-3-1-1-2H9l1 5 6 1v-3zM20 16l-1 4-3 1v3l6-1v-1l1-6h-3zM16 7v3H9L8 9V7h8zm0 6v3h-3l-1-2v-1h4z"
+  />
+</svg>

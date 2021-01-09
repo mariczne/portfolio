@@ -1,12 +1,13 @@
 <script lang="ts">
-  import type { IconType } from "../components/Icon/Icon";
-  import KwiekdevIcon from "../components/Icon/KwiekdevIcon.svelte";
+  import Icon from "../components/Icon/Icon.svelte";
 
-  export let Icon: typeof IconType = KwiekdevIcon;
+  export let icon: Icon["$$prop_def"]["name"];
 </script>
 
 <li>
-  <Icon size="2rem" />
+  {#if icon}
+    <Icon name={icon} size="2rem" />
+  {/if}
   <span><slot /></span>
 </li>
 

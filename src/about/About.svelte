@@ -1,14 +1,6 @@
 <script lang="ts">
   import Section from "../components/Section.svelte";
   import Item from "./Item.svelte";
-  import Css3Icon from "../components/Icon/Css3Icon.svelte";
-  import GitIcon from "../components/Icon/GitIcon.svelte";
-  import Html5Icon from "../components/Icon/Html5Icon.svelte";
-  import LinuxIcon from "../components/Icon/LinuxIcon.svelte";
-  import NodejsIcon from "../components/Icon/NodejsIcon.svelte";
-  import ReactIcon from "../components/Icon/ReactIcon.svelte";
-  import SqlIcon from "../components/Icon/SqlIcon.svelte";
-  import TypeScriptIcon from "../components/Icon/TypeScriptIcon.svelte";
 </script>
 
 <Section id="about" headerText="About me">
@@ -23,22 +15,22 @@
   <h3>Technologies that I have experience with:</h3>
   <h4>On the front-end, I use:</h4>
   <ul>
-    <Item Icon={Html5Icon}>HTML</Item>
-    <Item Icon={Css3Icon}>CSS (SASS)</Item>
-    <Item Icon={TypeScriptIcon}>TypeScript/JavaScript</Item>
-    <Item Icon={ReactIcon}>React</Item>
+    <Item icon="html5">HTML</Item>
+    <Item icon="css3">CSS (SASS)</Item>
+    <Item icon="typescript">TypeScript/JavaScript</Item>
+    <Item icon="react">React</Item>
   </ul>
 
   <h4>On the back-end, I work with:</h4>
   <ul>
-    <Item Icon={NodejsIcon}>Node.js</Item>
-    <Item Icon={SqlIcon}>SQL or MongoDB</Item>
+    <Item icon="nodejs">Node.js</Item>
+    <Item icon="sql">SQL or MongoDB</Item>
   </ul>
 
   <h4>I also use:</h4>
   <ul>
-    <Item Icon={GitIcon}>git</Item>
-    <Item Icon={LinuxIcon}>Linux</Item>
+    <Item icon="git">git</Item>
+    <Item icon="linux">Linux</Item>
   </ul>
 
   <p>
