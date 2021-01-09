@@ -1,20 +1,15 @@
 <script lang="ts">
-  import YoutubeIcon from "../components/Icon/YoutubeIcon.svelte";
-  import KwiekdevIcon from "../components/Icon/KwiekdevIcon.svelte";
+  import Icon from "../components/Icon/Icon.svelte";
 
-  let currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 </script>
 
 <footer>
-  <div class="logobox">
-    <KwiekdevIcon size="3.2rem" />
-    <!-- <div class="logo" /> -->
-  </div>
   <div class="copyright">&copy; 2019-{currentYear} Marcin Kwiek</div>
   <div class="inspired-by">
     inspired by
     <a href="https://www.youtube.com/watch?v=e9DfSCk-6Ko" class="ytlink">
-      <span><YoutubeIcon size="1.6rem" /></span>blank vhs covers were kinda
+      <span><Icon name="youtube" size="1.6rem" /></span>blank vhs covers were kinda
       beautiful
     </a>
   </div>
@@ -25,11 +20,6 @@
     text-align: center;
     font-size: 1.6rem;
   }
-
-  /* .footer__logobox img {
-    padding-top: 1rem;
-    max-width: 2rem;
-  } */
 
   .copyright {
     padding: 1rem;

@@ -1,7 +1,7 @@
 <script lang="ts">
   import NavigationLink from "./NavigationLink.svelte";
   import NavigationUnderline from "./NavigationUnderline.svelte";
-  import GithubIcon from "../components/Icon/GithubIcon.svelte";
+  import Icon from "../components/Icon/Icon.svelte";
 </script>
 
 <nav>
@@ -9,7 +9,7 @@
   <NavigationLink href="#projects">Projects</NavigationLink>
   <NavigationLink href="#contact">Contact</NavigationLink>
   <NavigationLink href="https://github.com/mariczne">
-    <GithubIcon size="18" title="See my GitHub profile" />
+    <Icon name="github" size="18" title="See my GitHub profile" />
   </NavigationLink>
 
   <div class="underlines">
@@ -34,5 +34,15 @@
   .underlines {
     display: none;
     font-size: 0px;
+  }
+
+  @keyframes toFullOpacity {
+    0% {
+      /* Hack for Lighthouse */
+      opacity: 0.001;
+    }
+    100% {
+      opacity: 100;
+    }
   }
 </style>

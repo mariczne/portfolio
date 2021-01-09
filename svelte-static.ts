@@ -4,9 +4,11 @@ import resolve from "@rollup/plugin-node-resolve";
 import svelte from "rollup-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
 import vm from "vm";
-import fs from "fs-extra";
+import { readdir, readFile, outputFile } from "fs-extra";
+import { resolve as pathResolve, extname } from "path";
 import posthtml from "posthtml";
 import insertAt from "posthtml-insert-at";
+import svgSpreact from "svg-spreact";
 import { minify } from "html-minifier";
 
 import type { create_ssr_component } from "svelte/types/runtime/internal/ssr";
@@ -52,12 +54,14 @@ function svelteStatic({ component, output, template, dev }: Options): Plugin {
       }) as SsrComponent;
       const { html, css } = Component.render();
 
-      const htmlTemplate = await fs.readFile(template, "utf8");
-      const scripts = await fs.readFile(`${output}/bundle.js`, "utf8");
+      const htmlTemplate = await readFile(template, "utf8");
+      const scripts = await readFile(`${output}/bundle.js`, "utf8");
+      const svgSprite = await createSprite("./src/components/Icon/svg/");
 
       const processedHtml = await posthtml(
         [
           insertAt({ selector: "body", prepend: html }),
+          insertAt({ selector: "body", append: svgSprite }),
           insertAt({
             selector: "head",
             append: `<style>${css.code}</style>`,
@@ -78,9 +82,38 @@ function svelteStatic({ component, output, template, dev }: Options): Plugin {
         minifyJS: !dev,
       });
 
-      await fs.outputFile(`${output}/index.html`, minifiedHtml);
+      await outputFile(`${output}/index.html`, minifiedHtml);
     },
   };
+}
+
+// This function needs better types; no typings available for svg-spreact
+async function createSprite(svgDirectory: string): Promise<string> {
+  async function readFolder(path: string) {
+    const files = (await readdir(path)).filter(
+      (file) => extname(file) === ".svg"
+    );
+
+    const filenames = files.map((file) => file.replace(".svg", ""));
+
+    const svgs = await Promise.all(
+      files.map(async (file) =>
+        (await readFile(pathResolve(path, file))).toString()
+      )
+    );
+
+    return Promise.resolve({ svgs, filenames });
+  }
+
+  function generateSprite({ svgs, filenames }) {
+    const processId = (n: number) => `icon-${filenames[n]}`;
+
+    return svgSpreact(svgs, { optimize: true, tidy: true, processId });
+  }
+
+  const { defs } = await readFolder(svgDirectory).then(generateSprite);
+
+  return defs;
 }
 
 export default svelteStatic;

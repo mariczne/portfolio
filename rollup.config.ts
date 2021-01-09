@@ -73,4 +73,4 @@ function serve(): Plugin {
   };
 }
 
-export default config
+export default config;

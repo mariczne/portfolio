@@ -28,4 +28,13 @@
     background-color: var(--blue);
     animation-duration: 0.8s;
   }
+
+  @keyframes slideFromLeft {
+    0% {
+      transform: translateX(-110vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 </style>

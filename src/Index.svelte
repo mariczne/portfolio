@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navigation from "./navigation/Navigation.svelte";
   import Hero from "./hero/Hero.svelte";
+  import Main from "./components/Main.svelte"
   import About from "./about/About.svelte";
   import Projects from "./projects/Projects.svelte";
   import Contact from "./contact/Contact.svelte";
@@ -9,11 +10,11 @@
 <slot>
   <Navigation />
   <Hero />
-  <main>
+  <Main>
     <About />
     <Projects />
     <Contact />
-  </main>
+  </Main>
 </slot>
 
 <style global>
@@ -69,18 +70,6 @@
     overflow-x: hidden;
   }
 
-  main {
-    line-height: 1.3;
-    margin: 0 2.4rem;
-  }
-
-  @media (min-width: 1140px) {
-    main {
-      max-width: 1140px;
-      margin: 0 auto;
-    }
-  }
-
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--grey) var(--black);
@@ -89,9 +78,11 @@
   *::-webkit-scrollbar {
     width: 12px;
   }
+
   *::-webkit-scrollbar-track {
     background: var(--black);
   }
+
   *::-webkit-scrollbar-thumb {
     background-color: var(--grey);
     border-radius: 20px;
@@ -104,25 +95,6 @@
     }
     100% {
       transform: translateX(0);
-    }
-  }
-
-  @keyframes slideFromLeft {
-    0% {
-      transform: translateX(-110vw);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes toFullOpacity {
-    0% {
-      /* Hack for Lighthouse */
-      opacity: 0.001;
-    }
-    100% {
-      opacity: 100;
     }
   }
 </style>
