@@ -3,7 +3,6 @@
   import Hero from "./hero/Hero.svelte";
   import Main from "./components/Main.svelte"
   import About from "./about/About.svelte";
-  import Projects from "./projects/Projects.svelte";
   import Contact from "./contact/Contact.svelte";
 </script>
 
@@ -12,7 +11,6 @@
   <Hero />
   <Main>
     <About />
-    <Projects />
     <Contact />
   </Main>
 </slot>
