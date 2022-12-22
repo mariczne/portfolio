@@ -6,7 +6,6 @@
 
 <nav>
   <NavigationLink href="#about">About me</NavigationLink>
-  <NavigationLink href="#projects">Projects</NavigationLink>
   <NavigationLink href="#contact">Contact</NavigationLink>
   <NavigationLink href="https://github.com/mariczne">
     <Icon name="github" size="18" title="See my GitHub profile" />
