@@ -1,10 +1,10 @@
 {
   "name": "portfolio",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Personal webpage",
   "scripts": {
-    "build": "rm -rf build && rollup -c && cp -r static build && ./generate-images.sh",
-    "dev": "npm run build && rollup -c -w",
+    "build": "rm -rf build && rollup --config rollup.config.ts --configPlugin typescript && cp -r static build && ./generate-images.sh",
+    "dev": "npm run build && rollup --config rollup.config.ts --configPlugin typescript -w",
     "start": "sirv build --host",
     "validate": "svelte-check",
     "genimg": "./generate-images.sh"
@@ -25,7 +25,7 @@
     "posthtml-insert-at": "^0.2.6",
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^1.4.2",
-    "rollup": "^2.3.4",
+    "rollup": "^2.79.1",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "sharp": "^0.27.0",
