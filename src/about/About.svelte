@@ -26,16 +26,6 @@
     <Item icon="nodejs">Node.js</Item>
     <Item icon="sql">SQL or MongoDB</Item>
   </ul>
-
-  <h4>I also use:</h4>
-  <ul>
-    <Item icon="git">git</Item>
-    <Item icon="linux">Linux</Item>
-  </ul>
-
-  <p>
-    I speak&nbsp;<strong>Polish</strong>&nbsp;and&nbsp;<strong>English</strong>.
-  </p>
 </Section>
 
 <style>
