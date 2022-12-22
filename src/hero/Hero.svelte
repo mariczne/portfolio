@@ -13,7 +13,7 @@
     <div class="title">
       <span class="title-line title-line-top">
         web&nbsp;
-        <span class="small">front&centerdot;end</span>
+        <span class="small">full&centerdot;stack</span>
       </span>
       <br />
       <span class="title-line title-line-bottom">developer</span>
@@ -51,6 +51,7 @@
     animation: 1.6s slideFromRight 0.5s;
     animation-fill-mode: backwards;
     will-change: transform;
+    line-height: 0.92;
   }
 
   .hero-lines {
@@ -73,7 +74,7 @@
   }
 
   .title-line-top {
-    font-size: 6.4rem;
+    font-size: 6.12rem;
     color: var(--yellow);
     /* Background color hack necessary until Lighthouse fixes its shit */
     background-color: var(--black);
