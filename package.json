@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "Personal webpage",
   "scripts": {
-    "build": "rm -rf build && rollup --config rollup.config.ts --configPlugin typescript",
+    "build": "rm -rf build && rollup --config rollup.config.ts --configPlugin typescript && cp -r static build",
     "dev": "npm run build && rollup --config rollup.config.ts --configPlugin typescript -w",
     "start": "sirv build --host",
     "validate": "svelte-check"
