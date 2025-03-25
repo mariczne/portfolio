@@ -36,7 +36,7 @@
     box-sizing: border-box;
     font-size: 62.5%;
     background-color: var(--black);
-    font-family: "Sans", "Arimo";
+    font-family: Sans, Arimo, sans-serif;
     scroll-behavior: smooth;
   }
 
