@@ -19,7 +19,7 @@
     "fast-glob": "^3.2.4",
     "fs-extra": "^8.1.0",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.2.1",
+    "postcss": "^8.4.31",
     "posthtml": "^0.12.0",
     "posthtml-insert-at": "^0.2.6",
     "prettier": "^2.2.1",
